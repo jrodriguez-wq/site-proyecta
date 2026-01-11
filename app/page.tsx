@@ -147,10 +147,10 @@ export default function Home() {
                           }}
                           variant="default"
                           size="default"
-                          className="w-full text-sm sm:text-base py-2.5 sm:py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                          className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                           aria-label="Quiero recibir asesoría personalizada"
                         >
-                          Quiero recibir asesoría personalizada
+                          <span className="whitespace-normal sm:whitespace-nowrap text-center">Quiero recibir asesoría personalizada</span>
                         </Button>
                       </div>
                     </div>
@@ -313,11 +313,11 @@ export default function Home() {
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
               variant="default"
-              size="lg"
-              className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              size="default"
+              className="text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 mx-auto shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               aria-label="Quiero recibir asesoría personalizada"
             >
-              Quiero recibir asesoría personalizada
+              <span className="whitespace-normal sm:whitespace-nowrap text-center">Quiero recibir asesoría personalizada</span>
             </Button>
           </FadeIn>
         </div>
@@ -640,11 +640,11 @@ export default function Home() {
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
               variant="destructive"
-              size="lg"
-              className="shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+              size="default"
+              className="text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 mx-auto shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
               aria-label="Quiero recibir asesoría personalizada"
             >
-              Quiero recibir asesoría personalizada
+              <span className="whitespace-normal sm:whitespace-nowrap text-center">Quiero recibir asesoría personalizada</span>
             </Button>
           </FadeIn>
         </div>
@@ -663,37 +663,37 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-12">
             {/* Información de contacto */}
-            <div className="space-y-8">
+            <div className="space-y-5 sm:space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-proyecta-blue mb-6">Información de contacto</h3>
-                <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-proyecta-blue mb-3 sm:mb-4 md:mb-6">Información de contacto</h3>
+                <div className="space-y-2.5 sm:space-y-3 md:space-y-4">
                   <div className="flex items-start">
-                    <MessageCircle className="h-5 w-5 mr-3 mt-1 shrink-0 text-proyecta-red" />
+                    <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 mt-1 shrink-0 text-proyecta-red" />
                     <a
                       href="https://wa.me/12392473557"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 hover:text-proyecta-blue transition-colors text-lg flex items-center gap-2"
+                      className="text-gray-700 hover:text-proyecta-blue transition-colors text-sm sm:text-base md:text-lg flex items-center gap-2"
                       aria-label="Contactar por WhatsApp"
                     >
                       239 247 3557
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-5 w-5 mr-3 mt-1 shrink-0 text-proyecta-red" />
+                    <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 mt-1 shrink-0 text-proyecta-red" />
                     <a
                       href="mailto:investments@proyectabusinessgroup.com"
-                      className="text-gray-700 hover:text-proyecta-blue transition-colors break-all text-lg"
+                      className="text-gray-700 hover:text-proyecta-blue transition-colors break-all text-sm sm:text-base md:text-lg"
                       aria-label="Enviar correo electrónico"
                     >
                       investments@proyectabusinessgroup.com
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="h-5 w-5 mr-3 mt-1 shrink-0 text-proyecta-red" />
-                    <span className="text-gray-700 text-lg">Florida, Estados Unidos</span>
+                    <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 mt-1 shrink-0 text-proyecta-red" />
+                    <span className="text-gray-700 text-sm sm:text-base md:text-lg">Florida, Estados Unidos</span>
                   </div>
                 </div>
               </div>
@@ -710,17 +710,17 @@ export default function Home() {
 
             {/* Botones de contacto */}
             <FadeIn delay={0.4}>
-              <div className="space-y-6">
-                <Card className="p-8 sm:p-10 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-[rgb(23,46,123)]">
-                  <CardHeader className="text-center pb-6">
-                    <CardTitle className="text-2xl sm:text-3xl text-[rgb(23,46,123)] mb-3">
+              <div className="space-y-4 sm:space-y-6">
+                <Card className="p-4 sm:p-6 md:p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-[rgb(23,46,123)]">
+                  <CardHeader className="text-center pb-3 sm:pb-4 md:pb-6">
+                    <CardTitle className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[rgb(23,46,123)] mb-1.5 sm:mb-2 md:mb-3">
                       Contáctanos ahora
                     </CardTitle>
-                    <CardDescription className="text-base text-gray-600">
+                    <CardDescription className="text-xs sm:text-sm md:text-base text-gray-600 px-1">
                       Elige la forma más conveniente para ponerte en contacto con nosotros
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-8">
+                  <CardContent className="space-y-4 sm:space-y-6 md:space-y-8">
                     <a
                       href="https://wa.me/12392473557"
                       target="_blank"
@@ -730,11 +730,11 @@ export default function Home() {
                     >
                       <Button
                         variant="default"
-                        size="lg"
-                        className="w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                        size="default"
+                        className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                       >
-                        <MessageCircle className="h-6 w-6" />
-                        <span>Contáctanos por WhatsApp</span>
+                        <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 shrink-0" />
+                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Contáctanos por WhatsApp</span>
                       </Button>
                     </a>
                     <a
@@ -744,11 +744,11 @@ export default function Home() {
                     >
                       <Button
                         variant="destructive"
-                        size="lg"
-                        className="w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                        size="default"
+                        className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                       >
-                        <Mail className="h-6 w-6" />
-                        <span>Enviar Correo Electrónico</span>
+                        <Mail className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 shrink-0" />
+                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Enviar Correo Electrónico</span>
                       </Button>
                     </a>
                   </CardContent>
