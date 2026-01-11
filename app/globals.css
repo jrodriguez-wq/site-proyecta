@@ -2,25 +2,29 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #172e7b;
+  
+  /* Colores corporativos Proyecta Business Group */
+  --proyecta-blue: rgb(23, 46, 123); /* R:23 G:46 B:123 */
+  --proyecta-red: rgb(180, 22, 40); /* R:180 G:22 B:40 */
+  --proyecta-blue-dark: rgb(18, 37, 98);
+  --proyecta-red-dark: rgb(144, 18, 32);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-proyecta-blue: 23 46 123;
+  --color-proyecta-red: 180 22 40;
+  --font-sans: var(--font-open-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-open-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
