@@ -19,16 +19,16 @@ const familyImages = [
 
 export const HappyFamiliesGallery = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="container mx-auto max-w-7xl">
-        <div className="space-y-12 lg:space-y-16">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
           {/* Header */}
-          <div className="text-center space-y-6">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-black text-[rgb(23,46,123)] tracking-tight leading-tight">
+          <div className="text-center space-y-4 sm:space-y-6 px-2 sm:px-0">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-[rgb(23,46,123)] tracking-tight leading-tight">
               Familias Felices
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto"></div>
-            <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
+            <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto"></div>
+            <p className="text-base sm:text-lg lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
               Únete a cientos de familias que han confiado en nosotros para su inversión inmobiliaria en Estados Unidos
             </p>
           </div>

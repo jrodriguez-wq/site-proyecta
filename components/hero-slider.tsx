@@ -151,7 +151,7 @@ export const HeroSlider = () => {
   const currentSlide = heroSlides[currentIndex];
 
   return (
-    <section className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+    <section className="relative w-full h-[400px] sm:h-[500px] md:h-[550px] lg:h-[650px] xl:h-[700px] overflow-hidden">
       {/* Background Images Slider */}
       <div className="absolute inset-0 z-0">
         {heroSlides.map((slide, index) => (

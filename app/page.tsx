@@ -18,13 +18,13 @@ const MODEL_MAIN_IMAGES: Record<string, string> = {
   aurora: `/img/hero/aurora.webp`,
   langdon: `/img/hero/1w5a1505-e5.webp`,
   emelia: `/img/hero/1w5a0754-e4.webp`,
-  duplex: `/modelos-optimized/duplex/interior/1.webp`,
+  duplex: `/img/hero/1w5a1493-e5.webp`,
 };
 
 export default function Home() {
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <WhatsAppFloat />
 
@@ -48,14 +48,14 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-3 sm:mb-4 leading-tight">
                   Nuestro Propósito
                 </h2>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mb-8" />
+                <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mb-6 sm:mb-8" />
               </div>
-              <div className="text-lg sm:text-xl text-gray-700 leading-relaxed space-y-6">
+              <div className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-4 sm:space-y-6">
                 <p className="font-medium">
                   Creemos firmemente en la importancia de <span className="font-bold text-[rgb(23,46,123)]">diversificar</span> tu patrimonio en una moneda tan fuerte como el <span className="font-bold text-[rgb(180,22,40)]">dólar</span>.
                 </p>
@@ -343,8 +343,8 @@ export default function Home() {
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <StaggerItem>
-              <Card className="bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
-                <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden">
+              <Card className="h-full flex flex-col bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/familia-casa.webp"
                     alt="Lotes Amplios"
@@ -356,13 +356,13 @@ export default function Home() {
                     <Building2 className="h-16 w-16 sm:h-20 sm:w-20 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <CardHeader className="text-center">
+                <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
                     Lotes Amplios
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-700 leading-relaxed">
+                <CardContent className="text-center flex-1 flex items-center justify-center">
+                  <p className="text-gray-700 leading-relaxed text-base">
                     Proyectos de construcción en amplios Lotes desde 1.000 mts2. o 10,000 SqFt.
                   </p>
                 </CardContent>
@@ -370,8 +370,8 @@ export default function Home() {
             </StaggerItem>
 
             <StaggerItem>
-              <Card className="bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
-                <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden">
+              <Card className="h-full flex flex-col bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/familia-cocina.webp"
                     alt="Casas"
@@ -383,13 +383,13 @@ export default function Home() {
                     <HomeIcon className="h-16 w-16 sm:h-20 sm:w-20 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <CardHeader className="text-center">
+                <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
                     Casas
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-700 leading-relaxed">
+                <CardContent className="text-center flex-1 flex items-center justify-center">
+                  <p className="text-gray-700 leading-relaxed text-base">
                     Modelos de Casas, desde 150 a 300 mts2 de área construida.
                   </p>
                 </CardContent>
@@ -397,8 +397,8 @@ export default function Home() {
             </StaggerItem>
 
             <StaggerItem>
-              <Card className="bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
-                <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden">
+              <Card className="h-full flex flex-col bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/interior.jpg"
                     alt="Proceso de Entrega"
@@ -410,13 +410,13 @@ export default function Home() {
                     <Clock className="h-16 w-16 sm:h-20 sm:w-20 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <CardHeader className="text-center">
+                <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
                     Proceso de Entrega
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-700 leading-relaxed">
+                <CardContent className="text-center flex-1 flex items-center justify-center">
+                  <p className="text-gray-700 leading-relaxed text-base">
                     Entre 10 y 12 meses en ciclo de construcción y proceso de venta
                   </p>
                 </CardContent>
@@ -424,8 +424,8 @@ export default function Home() {
             </StaggerItem>
 
             <StaggerItem>
-              <Card className="bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
-                <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden">
+              <Card className="h-full flex flex-col bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/nosotros.jpg"
                     alt="Acabados Premium"
@@ -437,13 +437,13 @@ export default function Home() {
                     <Star className="h-16 w-16 sm:h-20 sm:w-20 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <CardHeader className="text-center">
+                <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
                     Acabados Premium
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-700 leading-relaxed">
+                <CardContent className="text-center flex-1 flex items-center justify-center">
+                  <p className="text-gray-700 leading-relaxed text-base">
                     Acabados Premium de excelente calidad y Diseño Moderno.
                   </p>
                 </CardContent>
@@ -451,8 +451,8 @@ export default function Home() {
             </StaggerItem>
 
             <StaggerItem>
-              <Card className="bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
-                <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden">
+              <Card className="h-full flex flex-col bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/playa.webp"
                     alt="Ubicación"
@@ -464,13 +464,13 @@ export default function Home() {
                     <MapPin className="h-16 w-16 sm:h-20 sm:w-20 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <CardHeader className="text-center">
+                <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
                     Ubicación
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-700 leading-relaxed">
+                <CardContent className="text-center flex-1 flex items-center justify-center">
+                  <p className="text-gray-700 leading-relaxed text-base">
                     Ubicación estratégica en ciudades de alta valorización en Florida.
                   </p>
                 </CardContent>
@@ -478,8 +478,8 @@ export default function Home() {
             </StaggerItem>
 
             <StaggerItem>
-              <Card className="bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
-                <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden">
+              <Card className="h-full flex flex-col bg-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group">
+                <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/couple-in-real.jpg"
                     alt="Financiamiento"
@@ -491,13 +491,13 @@ export default function Home() {
                     <Key className="h-16 w-16 sm:h-20 sm:w-20 text-white drop-shadow-lg" />
                   </div>
                 </div>
-                <CardHeader className="text-center">
+                <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
                     Financiamiento
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-700 leading-relaxed">
+                <CardContent className="text-center flex-1 flex items-center justify-center">
+                  <p className="text-gray-700 leading-relaxed text-base">
                     Opciones de financiamiento disponibles para extranjeros con hasta 70% del valor de la vivienda.
                   </p>
                 </CardContent>
