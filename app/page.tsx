@@ -242,7 +242,7 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
-              inversión Seguras y Rentables
+              Inversiónes Seguras y Rentables
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-6" />
             <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
@@ -331,11 +331,11 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
-              Caracteristicas de Bienes Raíces
+              Características de Bienes Raíces
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-6" />
             <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto font-medium">
-              Todo lo que necesitas saber sobre nuestras propiedades
+              Todo lo que necesitas saber sobre nuestras Propiedades
             </p>
           </FadeIn>
 
@@ -829,7 +829,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                Solución integral para inversiones inmobiliarias seguras y rentables en Estados Unidos.
+                Solución integral para Inversiones inmobiliarias seguras y rentables en Estados Unidos.
               </p>
             </div>
 
