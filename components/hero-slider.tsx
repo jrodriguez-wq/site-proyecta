@@ -25,9 +25,9 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     image: "/img/hero/1w5a0754-e4.webp",
-    title: "Invierte en Bienes Raíces en los Estados Unidos",
-    subtitle: "y diversifica tu patrimonio en Dólares",
-    description: "Te ofrecemos una solución integral para una inversión confiable, rentable y segura. Contamos con mas de 5 años de Experiencia en el Mercado de Real Estate en Estados Unidos.",
+    title: "Invierte en Bienes Raíces",
+    subtitle: "Diversifica tu patrimonio en Dólares",
+    description: "Solución integral para una inversión confiable, rentable y segura.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
@@ -41,9 +41,9 @@ const heroSlides: HeroSlide[] = [
   },
   {
     image: "/img/hero/1w5a0814-1.webp",
-    title: "Bienvenidos a Proyecta Business Group",
-    subtitle: "Tu aliado estratégico en inversiones inmobiliarias",
-    description: "Proyectos de Inversión en Bienes Raíces transparentes, seguros y rentables.",
+    title: "Proyecta Business Group",
+    subtitle: "Tu aliado en inversiones inmobiliarias",
+    description: "Proyectos transparentes, seguros y rentables.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
@@ -52,25 +52,25 @@ const heroSlides: HeroSlide[] = [
   },
   {
     image: "/img/hero/1w5a1456-e5.webp",
-    title: "Inversión Segura y Rentable",
-    subtitle: "en Florida, Estados Unidos",
-    description: "Ubicaciones estratégicas en zonas de alta valorización cerca de Miami, Orlando, Tampa y Fort Myers.",
+    title: "Inversión en Florida",
+    subtitle: "Zonas de alta valorización",
+    description: "Cerca de Miami, Orlando, Tampa y Fort Myers.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
       target: "contacto",
     },
     secondaryButton: {
-      text: "Ver nuestros proyectos",
+      text: "Ver proyectos",
       action: "scroll",
       target: "nuestras-casas",
     },
   },
   {
     image: "/img/hero/1w5a1489-e5.webp",
-    title: "Invierte en Bienes Raíces en los Estados Unidos",
-    subtitle: "y diversifica tu patrimonio en Dólares",
-    description: "Te ofrecemos una solución integral para una inversión confiable, rentable y segura.",
+    title: "Diversifica tu Patrimonio",
+    subtitle: "En Bienes Raíces en USA",
+    description: "Inversión confiable y rentable en dólares.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
@@ -79,9 +79,9 @@ const heroSlides: HeroSlide[] = [
   },
   {
     image: "/img/hero/1w5a1493-e5.webp",
-    title: "Inversión Segura y Rentable",
-    subtitle: "en Florida, Estados Unidos",
-    description: "Más de 5 años de Experiencia en Real Estate en Estados Unidos.",
+    title: "Más de 5 años de Experiencia",
+    subtitle: "En Real Estate en Estados Unidos",
+    description: "Asesoría profesional para tu inversión.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
@@ -90,25 +90,25 @@ const heroSlides: HeroSlide[] = [
   },
   {
     image: "/img/hero/1w5a1505-e5.webp",
-    title: "Bienvenidos a Proyecta Business Group",
-    subtitle: "Tu aliado estratégico en inversiones inmobiliarias",
-    description: "Proyectos de Inversión en Bienes Raíces transparentes, seguros y rentables.",
+    title: "Proyectos Transparentes",
+    subtitle: "Seguros y Rentables",
+    description: "Inversión en bienes raíces con garantía.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
       target: "contacto",
     },
     secondaryButton: {
-      text: "Ver nuestros proyectos",
+      text: "Ver proyectos",
       action: "scroll",
       target: "nuestras-casas",
     },
   },
   {
     image: "/img/hero/aurora.webp",
-    title: "Invierte en Bienes Raíces en los Estados Unidos",
-    subtitle: "y diversifica tu patrimonio en Dólares",
-    description: "Solución integral para una inversión confiable, rentable y segura.",
+    title: "Inversión Inteligente",
+    subtitle: "En Bienes Raíces en USA",
+    description: "Confiable, rentable y segura.",
     primaryButton: {
       text: "Quiero recibir asesoría",
       action: "scroll",
@@ -179,21 +179,21 @@ export const HeroSlider = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 w-full h-full flex items-center">
+      <div className="relative z-20 w-full h-full flex items-center py-4 sm:py-6 md:py-8">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="max-w-4xl">
             <div
               className={cn(
-                "space-y-6 sm:space-y-8",
+                "space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8",
                 "transition-opacity duration-500 ease-in-out",
                 isTransitioning ? "opacity-0" : "opacity-100"
               )}
             >
               {/* Title */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-2xl">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.15] sm:leading-tight text-white drop-shadow-2xl">
                 {currentSlide.title}
                 {currentSlide.subtitle && (
-                  <span className="block text-[rgb(180,22,40)] mt-2 sm:mt-3 font-bold">
+                  <span className="block text-[rgb(180,22,40)] mt-1.5 sm:mt-2 md:mt-3 font-bold">
                     {currentSlide.subtitle}
                   </span>
                 )}
@@ -201,19 +201,19 @@ export const HeroSlider = () => {
 
               {/* Description */}
               {currentSlide.description && (
-                <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium max-w-3xl leading-relaxed drop-shadow-lg">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 font-medium max-w-3xl leading-relaxed drop-shadow-lg">
                   {currentSlide.description}
                 </p>
               )}
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 pt-1 sm:pt-2">
                 {currentSlide.primaryButton && (
                   <Button
                     onClick={() => handleScrollTo(currentSlide.primaryButton!.target)}
-                    size="lg"
+                    size="default"
                     variant="destructive"
-                    className="px-8 sm:px-10 md:px-12 py-6 sm:py-7 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-[rgb(144,18,32)]/50 transition-all duration-300 hover:scale-105"
+                    className="px-5 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-2.5 md:py-3 lg:py-6 text-xs sm:text-sm md:text-base lg:text-lg font-bold shadow-2xl hover:shadow-[rgb(144,18,32)]/50 transition-all duration-300 hover:scale-105"
                   >
                     {currentSlide.primaryButton.text}
                   </Button>
@@ -222,8 +222,8 @@ export const HeroSlider = () => {
                   <Button
                     onClick={() => handleScrollTo(currentSlide.secondaryButton!.target)}
                     variant="outline"
-                    size="lg"
-                    className="bg-white/10 backdrop-blur-md border-2 border-white/40 text-white px-8 sm:px-10 md:px-12 py-6 sm:py-7 text-lg sm:text-xl font-bold hover:bg-white/20 hover:border-white/60 shadow-xl transition-all duration-300 hover:scale-105"
+                    size="default"
+                    className="bg-white/10 backdrop-blur-md border-2 border-white/40 text-white px-5 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-2.5 md:py-3 lg:py-6 text-xs sm:text-sm md:text-base lg:text-lg font-bold hover:bg-white/20 hover:border-white/60 shadow-xl transition-all duration-300 hover:scale-105"
                   >
                     {currentSlide.secondaryButton.text}
                   </Button>

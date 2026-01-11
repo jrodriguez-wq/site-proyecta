@@ -29,7 +29,7 @@ export default function Home() {
       <WhatsAppFloat />
 
       {/* Hero Slider Section */}
-      <div id="inicio" className="pt-20">
+      <div id="inicio" className="pt-16 sm:pt-20">
         <HeroSlider />
       </div>
 
@@ -87,48 +87,46 @@ export default function Home() {
           </FadeIn>
 
           {/* Nuestro equipo - Juliana Bonilla */}
-          <StaggerContainer className="mt-12 sm:mt-20">
+          <StaggerContainer className="mt-10 sm:mt-12 lg:mt-20">
             <StaggerItem>
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
-                <div className="grid lg:grid-cols-2 gap-0">
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0">
                   {/* Imagen - Lado izquierdo */}
-                  <div className="relative min-h-[400px] lg:min-h-[600px] bg-gradient-to-br from-[rgb(23,46,123)]/5 to-[rgb(180,22,40)]/5">
-                    <div className="absolute inset-0 flex items-center justify-center p-8 lg:p-12">
-                      <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl group">
-                        <Image
-                          src="/img/juliana.webp"
-                          alt="Juliana Bonilla - Fundadora y CEO"
-                          fill
-                          className="object-contain transition-transform duration-700 group-hover:scale-105"
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                          priority
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </div>
+                  <div className="relative min-h-[350px] sm:min-h-[400px] lg:min-h-[600px] bg-gradient-to-br from-[rgb(23,46,123)]/5 to-[rgb(180,22,40)]/5 flex items-center justify-center p-6 sm:p-8 lg:p-12">
+                    <div className="relative w-full max-w-[280px] sm:max-w-md aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl group">
+                      <Image
+                        src="/img/juliana.webp"
+                        alt="Juliana Bonilla - Fundadora y CEO"
+                        fill
+                        className="object-contain transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 640px) 280px, (max-width: 1024px) 100vw, 50vw"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     {/* Decoración de fondo */}
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-[rgb(180,22,40)]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-[rgb(23,46,123)]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+                    <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-[rgb(180,22,40)]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                    <div className="absolute bottom-0 left-0 w-48 sm:w-64 h-48 sm:h-64 bg-[rgb(23,46,123)]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
                   </div>
 
                   {/* Contenido - Lado derecho */}
-                  <div className="bg-white p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
-                    <div className="space-y-6">
+                  <div className="bg-white p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                    <div className="space-y-4 sm:space-y-6">
                       {/* Badge */}
-                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-[rgb(180,22,40)]/10 text-[rgb(180,22,40)] text-sm font-semibold">
+                      <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[rgb(180,22,40)]/10 text-[rgb(180,22,40)] text-xs sm:text-sm font-semibold">
                         Fundadora y CEO
                       </div>
 
                       {/* Nombre */}
                       <div>
-                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[rgb(23,46,123)] mb-3 leading-tight">
+                        <h3 className="text-2xl sm:text-3xl lg:text-5xl font-black text-[rgb(23,46,123)] mb-2 sm:mb-3 leading-tight">
                           Juliana Bonilla
                         </h3>
-                        <div className="w-20 h-1 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full" />
+                        <div className="w-16 sm:w-20 h-0.5 sm:h-1 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full" />
                       </div>
 
                       {/* Descripción */}
-                      <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                      <div className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
                         <p className="font-medium">
                           Juliana Bonilla aporta experiencia en administración y ventas, asegurando operaciones fluidas y un excelente servicio al cliente.
                         </p>
@@ -141,15 +139,15 @@ export default function Home() {
                       </div>
 
                       {/* CTA Button */}
-                      <div className="pt-4">
+                      <div className="pt-2 sm:pt-4">
                         <Button
                           onClick={() => {
                             const element = document.getElementById("contacto");
                             element?.scrollIntoView({ behavior: "smooth" });
                           }}
                           variant="default"
-                          size="lg"
-                          className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                          size="default"
+                          className="w-full text-sm sm:text-base py-2.5 sm:py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                           aria-label="Quiero recibir asesoría personalizada"
                         >
                           Quiero recibir asesoría personalizada
