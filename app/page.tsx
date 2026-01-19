@@ -7,7 +7,8 @@ import { HappyFamiliesGallery } from "@/components/happy-families-gallery";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MapPin, Home as HomeIcon, Building2, Clock, Star, BedDouble, Bath, Key, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Home as HomeIcon, Building2, Clock, Star, BedDouble, Bath, Key, Facebook, Instagram, MessageCircle, FileText } from "lucide-react";
+import Link from "next/link";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
 import { models } from "@/lib/data/models";
 
@@ -751,6 +752,17 @@ export default function Home() {
                         <span className="whitespace-normal sm:whitespace-nowrap text-center">Enviar Correo Electrónico</span>
                       </Button>
                     </a>
+                    <Link href="/application" className="w-full block">
+                      <Button
+                        variant="outline"
+                        size="default"
+                        className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 border-2 border-[rgb(23,46,123)]"
+                        aria-label="Enviar aplicación"
+                      >
+                        <FileText className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 shrink-0" />
+                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Enviar Aplicación</span>
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>
@@ -820,11 +832,11 @@ export default function Home() {
             <div className="lg:col-span-1">
               <div className="mb-6">
                 <Image
-                  src="/favicon.png"
+                  src="/Logotipo.png"
                   alt="Proyecta Business Group Logo"
-                  width={180}
-                  height={90}
-                  className="h-auto w-auto max-w-[180px]"
+                  width={240}
+                  height={100}
+                  className="h-auto w-auto max-w-[200px] sm:max-w-[240px]"
                   priority
                 />
               </div>

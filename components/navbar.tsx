@@ -2,6 +2,8 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,6 +15,8 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ className }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -22,11 +26,40 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Manejar scroll cuando se navega desde otra página con hash
+  React.useEffect(() => {
+    if (pathname === "/" && window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [pathname]);
+
   const handleScrollTo = (id: string) => {
+    // Si estamos en otra página, navegar a la página principal primero
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      setMobileMenuOpen(false);
+      return;
+    }
+
+    // Si estamos en la página principal, hacer scroll
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setMobileMenuOpen(false);
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (pathname !== "/") {
+      router.push("/");
+    } else {
+      handleScrollTo("inicio");
     }
   };
 
@@ -52,25 +85,25 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center shrink-0">
             <button
-              onClick={() => handleScrollTo("inicio")}
-              className="flex items-center"
+              onClick={handleLogoClick}
+              className="flex items-center h-full"
               aria-label="Ir a inicio"
             >
               <Image
-                src="/Logotipo.jpg"
+                src="/Logotipo.png"
                 alt="Proyecta Business Group Logo"
-                width={180}
-                height={60}
+                width={200}
+                height={70}
                 priority
-                className="h-auto w-auto max-h-[60px]"
+                className="h-[50px] sm:h-[60px] lg:h-[70px] w-auto object-contain"
               />
             </button>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.slice(0, -1).map((item) => (
               <button
                 key={item.id}
@@ -86,10 +119,19 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
               </button>
             ))}
             <Button
+              asChild
+              variant="destructive"
+              size="default"
+              className="ml-1"
+              aria-label="Aplicar"
+            >
+              <Link href="/application">Aplicar</Link>
+            </Button>
+            <Button
               onClick={() => handleScrollTo("contacto")}
               variant="default"
               size="default"
-              className="ml-2"
+              className="ml-1"
               aria-label="Contáctenos"
             >
               Contáctenos
@@ -129,6 +171,14 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
                 {item.label}
               </button>
             ))}
+            <Link
+              href="/application"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold transition-colors bg-[rgb(180,22,40)] text-white hover:bg-[rgb(144,18,32)]"
+              aria-label="Aplicar"
+            >
+              Aplicar
+            </Link>
           </div>
         )}
       </nav>
