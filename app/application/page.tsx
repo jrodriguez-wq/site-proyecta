@@ -295,7 +295,7 @@ export default function ApplicationPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
       <Navbar />
       <WhatsAppFloat />
 
@@ -303,7 +303,7 @@ export default function ApplicationPage() {
       <Modal isOpen={submitSuccess} onClose={handleCloseModal}>
         <ModalHeader onClose={handleCloseModal}>
           <h2 className="text-2xl sm:text-3xl font-black text-[rgb(23,46,123)]">
-            ¡Aplicación Enviada!
+            Application Submitted!
           </h2>
         </ModalHeader>
         <ModalContent>
@@ -312,7 +312,7 @@ export default function ApplicationPage() {
               <CheckCircle className="w-12 h-12 text-green-600" />
             </div>
             <p className="text-base sm:text-lg text-gray-700 mb-6">
-              Gracias por completar tu aplicación. Nos pondremos en contacto contigo pronto.
+              Thank you for completing your application. We will contact you soon.
             </p>
           </div>
         </ModalContent>
@@ -323,7 +323,7 @@ export default function ApplicationPage() {
             size="default"
             className="w-full sm:w-auto"
           >
-            Volver a la Home
+            Return to Home
           </Button>
         </ModalFooter>
       </Modal>
@@ -335,33 +335,33 @@ export default function ApplicationPage() {
             <div className="flex items-center justify-center mb-4">
               <FileText className="h-12 w-12 sm:h-16 sm:w-16 text-white mr-4" />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
-                Formulario de Aplicación
+                Rental Application
               </h1>
             </div>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-white rounded-full mx-auto mb-6" />
             <p className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto">
-              Completa el siguiente formulario para aplicar a nuestras propiedades
+              Complete the following form to apply for our properties
             </p>
           </FadeIn>
         </div>
       </div>
 
       {/* Form */}
-      <div className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+      <div className="py-8 sm:py-12 lg:py-16 px-3 sm:px-4 md:px-6 lg:px-8 overflow-x-hidden">
+        <div className="container mx-auto max-w-6xl w-full">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 w-full">
             {/* Tenant Information */}
             <FadeIn>
               <Card className="shadow-xl border-t-4 border-[rgb(23,46,123)]">
                 <CardHeader className="bg-gradient-to-r from-[rgb(23,46,123)] to-[rgb(18,37,98)] text-white rounded-t-lg py-4 px-4 sm:px-6">
                   <CardTitle className="text-xl sm:text-2xl font-black">
-                    Información del Inquilino
+                    Tenant Information
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-4">
+                <CardContent className="p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4">
                   <div className="space-y-3">
-                    <div>
-                      <Label htmlFor="fullName">Nombre Completo *</Label>
+                    <div className="w-full">
+                      <Label htmlFor="fullName" className="text-sm sm:text-base">Full Name *</Label>
                       <Input
                         id="fullName"
                         name="full_name"
@@ -369,13 +369,14 @@ export default function ApplicationPage() {
                         value={formData.full_name}
                         onChange={handleInputChange}
                         required
-                        placeholder="Ingresa tu nombre completo"
+                        placeholder="Enter your full name"
+                        className="w-full min-w-0"
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                      <div>
-                        <Label htmlFor="homePhone">Teléfono de Casa</Label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="homePhone" className="text-sm sm:text-base">Home Phone</Label>
                         <Input
                           id="homePhone"
                           name="home_phone"
@@ -383,10 +384,11 @@ export default function ApplicationPage() {
                           value={formData.home_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-1234"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="workPhone">Teléfono del Trabajo</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="workPhone" className="text-sm sm:text-base">Work Phone</Label>
                         <Input
                           id="workPhone"
                           name="work_phone"
@@ -394,10 +396,11 @@ export default function ApplicationPage() {
                           value={formData.work_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-5678"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="cellPhone">Teléfono Celular</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="cellPhone" className="text-sm sm:text-base">Cell Phone</Label>
                         <Input
                           id="cellPhone"
                           name="cell_phone"
@@ -405,23 +408,25 @@ export default function ApplicationPage() {
                           value={formData.cell_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-9012"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="dob">Fecha de Nacimiento</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="dob" className="text-sm sm:text-base">Date of Birth</Label>
                         <Input
                           id="dob"
                           name="dob"
                           type="date"
                           value={formData.dob}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="ssn">Número de Seguro Social</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="ssn" className="text-sm sm:text-base">Social Security Number</Label>
                         <Input
                           id="ssn"
                           name="ssn"
@@ -429,28 +434,31 @@ export default function ApplicationPage() {
                           value={formData.ssn}
                           onChange={handleInputChange}
                           placeholder="XXX-XX-XXXX"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="driverLicense">Número de Licencia</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="driverLicense" className="text-sm sm:text-base">Driver's License Number</Label>
                         <Input
                           id="driverLicense"
                           name="driver_license"
                           type="text"
                           value={formData.driver_license}
                           onChange={handleInputChange}
-                          placeholder="Número de licencia"
+                          placeholder="License number"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="driverLicenseState">Estado</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="driverLicenseState" className="text-sm sm:text-base">State</Label>
                         <Select
                           id="driverLicenseState"
                           name="driver_license_state"
                           value={formData.driver_license_state}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         >
-                          <option value="">Selecciona un estado</option>
+                          <option value="">Select a state</option>
                           <option value="FL">Florida</option>
                           <option value="AL">Alabama</option>
                           <option value="AK">Alaska</option>
@@ -505,47 +513,50 @@ export default function ApplicationPage() {
                       </div>
                     </div>
 
-                    <div>
-                      <Label htmlFor="email">Correo Electrónico</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="email" className="text-sm sm:text-base">Email Address</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="tu@email.com"
+                        placeholder="your@email.com"
+                        className="w-full min-w-0"
                       />
                     </div>
 
                     <div className="pt-3 border-t border-gray-200">
-                      <h3 className="text-lg font-bold text-[rgb(23,46,123)] mb-3">
-                        Información del Co-Solicitante
+                      <h3 className="text-base sm:text-lg font-bold text-[rgb(23,46,123)] mb-3">
+                        Co-Applicant Information
                       </h3>
                       <div className="space-y-3">
-                        <div>
-                          <Label htmlFor="coAppName">Nombre del Co-Solicitante</Label>
+                        <div className="w-full min-w-0">
+                          <Label htmlFor="coAppName" className="text-sm sm:text-base">Co-Applicant Name</Label>
                           <Input
                             id="coAppName"
                             name="co_app_name"
                             type="text"
                             value={formData.co_app_name}
                             onChange={handleInputChange}
-                            placeholder="Nombre completo"
+                            placeholder="Full name"
+                            className="w-full min-w-0"
                           />
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div>
-                            <Label htmlFor="coAppDob">Fecha de Nacimiento</Label>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                          <div className="w-full min-w-0">
+                            <Label htmlFor="coAppDob" className="text-sm sm:text-base">Date of Birth</Label>
                             <Input
                               id="coAppDob"
                               name="co_app_dob"
                               type="date"
                               value={formData.co_app_dob}
                               onChange={handleInputChange}
+                              className="w-full min-w-0"
                             />
                           </div>
-                          <div>
-                            <Label htmlFor="coAppSsn">Número de Seguro Social</Label>
+                          <div className="w-full min-w-0">
+                            <Label htmlFor="coAppSsn" className="text-sm sm:text-base">Social Security Number</Label>
                             <Input
                               id="coAppSsn"
                               name="co_app_ssn"
@@ -553,15 +564,16 @@ export default function ApplicationPage() {
                               value={formData.co_app_ssn}
                               onChange={handleInputChange}
                               placeholder="XXX-XX-XXXX"
+                              className="w-full min-w-0"
                             />
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div>
-                      <Label htmlFor="occupants">
-                        Nombres y edades de todas las personas que vivirán en la residencia
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="occupants" className="text-sm sm:text-base">
+                        Names and ages of everyone who will live in the residence
                       </Label>
                       <Textarea
                         id="occupants"
@@ -569,40 +581,43 @@ export default function ApplicationPage() {
                         value={formData.occupants}
                         onChange={handleInputChange}
                         rows={3}
-                        placeholder="Ej: Juan Pérez, 35 años; María Pérez, 32 años; etc."
+                        placeholder="Example: John Smith, 35 years old; Jane Smith, 32 years old; etc."
+                        className="w-full min-w-0"
                       />
                     </div>
 
-                    <div>
-                      <Label htmlFor="pets">Lista de todas las mascotas</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="pets" className="text-sm sm:text-base">List of all pets</Label>
                       <Textarea
                         id="pets"
                         name="pets"
                         value={formData.pets}
                         onChange={handleInputChange}
                         rows={2}
-                        placeholder="Ej: 1 perro, Golden Retriever, 2 años"
+                        placeholder="Example: 1 dog, Golden Retriever, 2 years old"
+                        className="w-full min-w-0"
                       />
                     </div>
 
                     <div className="pt-3 border-t border-gray-200">
-                      <h3 className="text-lg font-bold text-[rgb(23,46,123)] mb-3">
-                        Información del Vehículo
+                      <h3 className="text-base sm:text-lg font-bold text-[rgb(23,46,123)] mb-3">
+                        Vehicle Information
                       </h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-                        <div>
-                          <Label htmlFor="vehicleMake">Marca/Modelo</Label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                        <div className="w-full min-w-0">
+                          <Label htmlFor="vehicleMake" className="text-sm sm:text-base">Make/Model</Label>
                           <Input
                             id="vehicleMake"
                             name="vehicle_make"
                             type="text"
                             value={formData.vehicle_make}
                             onChange={handleInputChange}
-                            placeholder="Ej: Toyota Camry"
+                            placeholder="Example: Toyota Camry"
+                            className="w-full min-w-0"
                           />
                         </div>
-                        <div>
-                          <Label htmlFor="vehicleYear">Año</Label>
+                        <div className="w-full min-w-0">
+                          <Label htmlFor="vehicleYear" className="text-sm sm:text-base">Year</Label>
                           <Input
                             id="vehicleYear"
                             name="vehicle_year"
@@ -612,10 +627,11 @@ export default function ApplicationPage() {
                             placeholder="2020"
                             min="1900"
                             max="2030"
+                            className="w-full min-w-0"
                           />
                         </div>
-                        <div>
-                          <Label htmlFor="vehicleLicense">Placa/Estado</Label>
+                        <div className="w-full min-w-0">
+                          <Label htmlFor="vehicleLicense" className="text-sm sm:text-base">License Plate/State</Label>
                           <Input
                             id="vehicleLicense"
                             name="vehicle_license"
@@ -623,6 +639,7 @@ export default function ApplicationPage() {
                             value={formData.vehicle_license}
                             onChange={handleInputChange}
                             placeholder="ABC123 / FL"
+                            className="w-full min-w-0"
                           />
                         </div>
                       </div>
@@ -640,11 +657,11 @@ export default function ApplicationPage() {
                     Información de Empleo
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-4">
+                <CardContent className="p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4">
                   <div className="space-y-3">
-                    <div>
-                      <Label className="block mb-2">Estado de Empleo del Solicitante:</Label>
-                      <div className="flex flex-wrap gap-3 sm:gap-4">
+                    <div className="w-full min-w-0">
+                      <Label className="block mb-2 text-sm sm:text-base">Estado de Empleo del Solicitante:</Label>
+                      <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                         <label className="flex items-center cursor-pointer">
                           <input
                             type="radio"
@@ -692,8 +709,8 @@ export default function ApplicationPage() {
                       </div>
                     </div>
 
-                    <div>
-                      <Label htmlFor="employer">Empleador</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="employer" className="text-sm sm:text-base">Empleador</Label>
                       <Input
                         id="employer"
                         name="employer"
@@ -701,11 +718,12 @@ export default function ApplicationPage() {
                         value={formData.employer}
                         onChange={handleInputChange}
                         placeholder="Nombre de la empresa"
+                        className="w-full min-w-0"
                       />
                     </div>
 
-                    <div>
-                      <Label htmlFor="empAddress">Dirección</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="empAddress" className="text-sm sm:text-base">Dirección</Label>
                       <Input
                         id="empAddress"
                         name="emp_address"
@@ -713,12 +731,13 @@ export default function ApplicationPage() {
                         value={formData.emp_address}
                         onChange={handleInputChange}
                         placeholder="Dirección completa del empleador"
+                        className="w-full min-w-0"
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="jobTitle">Título del Trabajo</Label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="jobTitle" className="text-sm sm:text-base">Título del Trabajo</Label>
                         <Input
                           id="jobTitle"
                           name="job_title"
@@ -726,10 +745,11 @@ export default function ApplicationPage() {
                           value={formData.job_title}
                           onChange={handleInputChange}
                           placeholder="Ej: Gerente de Ventas"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="supervisor">Nombre del Supervisor</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="supervisor" className="text-sm sm:text-base">Nombre del Supervisor</Label>
                         <Input
                           id="supervisor"
                           name="supervisor"
@@ -737,13 +757,14 @@ export default function ApplicationPage() {
                           value={formData.supervisor}
                           onChange={handleInputChange}
                           placeholder="Nombre del supervisor"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="dateEmployed">Fecha de Empleo</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="dateEmployed" className="text-sm sm:text-base">Fecha de Empleo</Label>
                         <Input
                           id="dateEmployed"
                           name="date_employed"
@@ -751,10 +772,11 @@ export default function ApplicationPage() {
                           value={formData.date_employed}
                           onChange={handleInputChange}
                           placeholder="Ej: 2020-Presente"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="empPhone">Teléfono</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="empPhone" className="text-sm sm:text-base">Teléfono</Label>
                         <Input
                           id="empPhone"
                           name="emp_phone"
@@ -762,10 +784,11 @@ export default function ApplicationPage() {
                           value={formData.emp_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-1234"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="monthlyPay">Salario Mensual ($)</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="monthlyPay" className="text-sm sm:text-base">Salario Mensual ($)</Label>
                         <Input
                           id="monthlyPay"
                           name="monthly_pay"
@@ -774,10 +797,11 @@ export default function ApplicationPage() {
                           value={formData.monthly_pay}
                           onChange={handleInputChange}
                           placeholder="0.00"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="otherIncomeAmount">Otros Ingresos ($)</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="otherIncomeAmount" className="text-sm sm:text-base">Otros Ingresos ($)</Label>
                         <Input
                           id="otherIncomeAmount"
                           name="other_income_amount"
@@ -786,6 +810,7 @@ export default function ApplicationPage() {
                           value={formData.other_income_amount}
                           onChange={handleInputChange}
                           placeholder="0.00"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
@@ -811,39 +836,41 @@ export default function ApplicationPage() {
               <Card className="shadow-xl border-t-4 border-[rgb(23,46,123)]">
                 <CardHeader className="bg-gradient-to-r from-[rgb(23,46,123)] to-[rgb(18,37,98)] text-white rounded-t-lg py-4 px-4 sm:px-6">
                   <CardTitle className="text-xl sm:text-2xl font-black">
-                    Historial Residencial (Últimos 3 Años)
+                    Residential History (Last 3 Years)
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-5">
+                <CardContent className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-5">
                   {/* Current Address */}
                   <div className="space-y-3">
-                    <h3 className="text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
-                      Dirección Actual
+                    <h3 className="text-base sm:text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
+                      Current Address
                     </h3>
-                    <div>
-                      <Label htmlFor="currAddress">Dirección</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="currAddress" className="text-sm sm:text-base">Address</Label>
                       <Input
                         id="currAddress"
                         name="curr_address"
                         type="text"
                         value={formData.curr_address}
                         onChange={handleInputChange}
-                        placeholder="Dirección completa"
+                        placeholder="Complete address"
+                        className="w-full min-w-0"
                       />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="currMoveIn">Fecha de Ingreso</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="currMoveIn" className="text-sm sm:text-base">Move In Date</Label>
                         <Input
                           id="currMoveIn"
                           name="curr_move_in"
                           type="date"
                           value={formData.curr_move_in}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="currRent">Alquiler ($)</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="currRent" className="text-sm sm:text-base">Rent ($)</Label>
                         <Input
                           id="currRent"
                           name="curr_rent"
@@ -852,21 +879,23 @@ export default function ApplicationPage() {
                           value={formData.curr_rent}
                           onChange={handleInputChange}
                           placeholder="0.00"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="currOwner">Propietario / Agente</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="currOwner" className="text-sm sm:text-base">Owner / Agent</Label>
                         <Input
                           id="currOwner"
                           name="curr_owner"
                           type="text"
                           value={formData.curr_owner}
                           onChange={handleInputChange}
-                          placeholder="Nombre"
+                          placeholder="Name"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="currOwnerPhone">Teléfono</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="currOwnerPhone" className="text-sm sm:text-base">Phone</Label>
                         <Input
                           id="currOwnerPhone"
                           name="curr_owner_phone"
@@ -874,61 +903,66 @@ export default function ApplicationPage() {
                           value={formData.curr_owner_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-1234"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
-                    <div>
-                      <Label htmlFor="currReason">Razón para Mudarse</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="currReason" className="text-sm sm:text-base">Reason for Moving</Label>
                       <Input
                         id="currReason"
                         name="curr_reason"
                         type="text"
                         value={formData.curr_reason}
                         onChange={handleInputChange}
-                        placeholder="Razón para dejar la dirección actual"
+                        placeholder="Reason for leaving current address"
+                        className="w-full min-w-0"
                       />
                     </div>
                   </div>
 
                   {/* Previous Address */}
-                  <div className="pt-6 border-t border-gray-200 space-y-4">
-                    <h3 className="text-xl font-bold text-[rgb(23,46,123)] border-b-2 border-gray-200 pb-2">
-                      Dirección Anterior
+                  <div className="pt-4 sm:pt-6 border-t border-gray-200 space-y-3 sm:space-y-4">
+                    <h3 className="text-base sm:text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
+                      Previous Address 1
                     </h3>
-                    <div>
-                      <Label htmlFor="prevAddress">Dirección</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="prevAddress" className="text-sm sm:text-base">Address</Label>
                       <Input
                         id="prevAddress"
                         name="prev_address"
                         type="text"
                         value={formData.prev_address}
                         onChange={handleInputChange}
-                        placeholder="Dirección completa"
+                        placeholder="Complete address"
+                        className="w-full min-w-0"
                       />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="prevMoveIn">Fecha de Ingreso</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prevMoveIn" className="text-sm sm:text-base">Move In Date</Label>
                         <Input
                           id="prevMoveIn"
                           name="prev_move_in"
                           type="date"
                           value={formData.prev_move_in}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prevMoveOut">Fecha de Salida</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prevMoveOut" className="text-sm sm:text-base">Move Out Date</Label>
                         <Input
                           id="prevMoveOut"
                           name="prev_move_out"
                           type="date"
                           value={formData.prev_move_out}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prevRent">Alquiler ($)</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prevRent" className="text-sm sm:text-base">Rent ($)</Label>
                         <Input
                           id="prevRent"
                           name="prev_rent"
@@ -937,10 +971,11 @@ export default function ApplicationPage() {
                           value={formData.prev_rent}
                           onChange={handleInputChange}
                           placeholder="0.00"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prevOwnerPhone">Teléfono Propietario</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prevOwnerPhone" className="text-sm sm:text-base">Owner Phone</Label>
                         <Input
                           id="prevOwnerPhone"
                           name="prev_owner_phone"
@@ -948,30 +983,33 @@ export default function ApplicationPage() {
                           value={formData.prev_owner_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-1234"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="prevOwner">Propietario / Agente</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prevOwner" className="text-sm sm:text-base">Owner / Agent</Label>
                         <Input
                           id="prevOwner"
                           name="prev_owner"
                           type="text"
                           value={formData.prev_owner}
                           onChange={handleInputChange}
-                          placeholder="Nombre del propietario o agente"
+                          placeholder="Owner or agent name"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prevReason">Razón para Mudarse</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prevReason" className="text-sm sm:text-base">Reason for Moving</Label>
                         <Input
                           id="prevReason"
                           name="prev_reason"
                           type="text"
                           value={formData.prev_reason}
                           onChange={handleInputChange}
-                          placeholder="Razón para dejar la dirección anterior"
+                          placeholder="Reason for leaving previous address"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
@@ -979,43 +1017,46 @@ export default function ApplicationPage() {
 
                   {/* Previous Address 2 */}
                   <div className="pt-4 border-t border-gray-200 space-y-3">
-                    <h3 className="text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
-                      Dirección Anterior 2
+                    <h3 className="text-base sm:text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
+                      Previous Address 2
                     </h3>
-                    <div>
-                      <Label htmlFor="prev2Address">Dirección</Label>
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="prev2Address" className="text-sm sm:text-base">Address</Label>
                       <Input
                         id="prev2Address"
                         name="prev2_address"
                         type="text"
                         value={formData.prev2_address}
                         onChange={handleInputChange}
-                        placeholder="Dirección completa"
+                        placeholder="Complete address"
+                        className="w-full min-w-0"
                       />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="prev2MoveIn">Fecha de Ingreso</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prev2MoveIn" className="text-sm sm:text-base">Move In Date</Label>
                         <Input
                           id="prev2MoveIn"
                           name="prev2_move_in"
                           type="date"
                           value={formData.prev2_move_in}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prev2MoveOut">Fecha de Salida</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prev2MoveOut" className="text-sm sm:text-base">Move Out Date</Label>
                         <Input
                           id="prev2MoveOut"
                           name="prev2_move_out"
                           type="date"
                           value={formData.prev2_move_out}
                           onChange={handleInputChange}
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prev2Rent">Alquiler ($)</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prev2Rent" className="text-sm sm:text-base">Rent ($)</Label>
                         <Input
                           id="prev2Rent"
                           name="prev2_rent"
@@ -1024,10 +1065,11 @@ export default function ApplicationPage() {
                           value={formData.prev2_rent}
                           onChange={handleInputChange}
                           placeholder="0.00"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prev2OwnerPhone">Teléfono Propietario</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prev2OwnerPhone" className="text-sm sm:text-base">Owner Phone</Label>
                         <Input
                           id="prev2OwnerPhone"
                           name="prev2_owner_phone"
@@ -1035,30 +1077,33 @@ export default function ApplicationPage() {
                           value={formData.prev2_owner_phone}
                           onChange={handleInputChange}
                           placeholder="(239) 555-1234"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                      <div>
-                        <Label htmlFor="prev2Owner">Propietario / Agente</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prev2Owner" className="text-sm sm:text-base">Owner / Agent</Label>
                         <Input
                           id="prev2Owner"
                           name="prev2_owner"
                           type="text"
                           value={formData.prev2_owner}
                           onChange={handleInputChange}
-                          placeholder="Nombre del propietario o agente"
+                          placeholder="Owner or agent name"
+                          className="w-full min-w-0"
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="prev2Reason">Razón para Mudarse</Label>
+                      <div className="w-full min-w-0">
+                        <Label htmlFor="prev2Reason" className="text-sm sm:text-base">Reason for Moving</Label>
                         <Input
                           id="prev2Reason"
                           name="prev2_reason"
                           type="text"
                           value={formData.prev2_reason}
                           onChange={handleInputChange}
-                          placeholder="Razón para dejar esta dirección"
+                          placeholder="Reason for leaving this address"
+                          className="w-full min-w-0"
                         />
                       </div>
                     </div>
@@ -1072,14 +1117,14 @@ export default function ApplicationPage() {
               <Card className="shadow-xl border-t-4 border-[rgb(180,22,40)]">
                 <CardHeader className="bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(144,18,32)] text-white rounded-t-lg py-4 px-4 sm:px-6">
                   <CardTitle className="text-xl sm:text-2xl font-black">
-                    Historial Crediticio
+                    Credit History
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-4">
+                <CardContent className="p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4">
                   <div className="space-y-3">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                       <div>
-                        <Label className="block mb-2 text-sm">¿Ha declarado bancarrota?</Label>
+                        <Label className="block mb-2 text-sm">Have you filed for bankruptcy?</Label>
                         <div className="flex gap-4">
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1090,7 +1135,7 @@ export default function ApplicationPage() {
                               onChange={() => handleRadioChange("bankruptcy", "yes")}
                               className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                             />
-                            <span className="text-sm">Sí</span>
+                            <span className="text-sm">Yes</span>
                           </label>
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1107,7 +1152,7 @@ export default function ApplicationPage() {
                       </div>
 
                       <div>
-                        <Label className="block mb-2 text-sm">¿Ha sido desalojado?</Label>
+                        <Label className="block mb-2 text-sm">Have you been evicted?</Label>
                         <div className="flex gap-4">
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1118,7 +1163,7 @@ export default function ApplicationPage() {
                               onChange={() => handleRadioChange("evicted", "yes")}
                               className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                             />
-                            <span className="text-sm">Sí</span>
+                            <span className="text-sm">Yes</span>
                           </label>
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1135,7 +1180,7 @@ export default function ApplicationPage() {
                       </div>
 
                       <div>
-                        <Label className="block mb-2 text-sm">¿Es parte de alguna demanda legal?</Label>
+                        <Label className="block mb-2 text-sm">Are you involved in any legal lawsuits?</Label>
                         <div className="flex gap-4">
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1146,7 +1191,7 @@ export default function ApplicationPage() {
                               onChange={() => handleRadioChange("lawsuits", "yes")}
                               className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                             />
-                            <span className="text-sm">Sí</span>
+                            <span className="text-sm">Yes</span>
                           </label>
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1163,7 +1208,7 @@ export default function ApplicationPage() {
                       </div>
 
                       <div>
-                        <Label className="block mb-2 text-sm">¿Pagos tardíos en el último año?</Label>
+                        <Label className="block mb-2 text-sm">Late payments in the past year?</Label>
                         <div className="flex gap-4">
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1174,7 +1219,7 @@ export default function ApplicationPage() {
                               onChange={() => handleRadioChange("late_payments", "yes")}
                               className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                             />
-                            <span className="text-sm">Sí</span>
+                            <span className="text-sm">Yes</span>
                           </label>
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1191,7 +1236,7 @@ export default function ApplicationPage() {
                       </div>
 
                       <div>
-                        <Label className="block mb-2 text-sm">¿Hay sentencias en su contra?</Label>
+                        <Label className="block mb-2 text-sm">Any judgments against you?</Label>
                         <div className="flex gap-4">
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1202,7 +1247,7 @@ export default function ApplicationPage() {
                               onChange={() => handleRadioChange("judgments", "yes")}
                               className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                             />
-                            <span className="text-sm">Sí</span>
+                            <span className="text-sm">Yes</span>
                           </label>
                           <label className="flex items-center cursor-pointer">
                             <input
@@ -1219,9 +1264,9 @@ export default function ApplicationPage() {
                       </div>
                     </div>
 
-                    <div>
-                      <Label htmlFor="creditExplanation">
-                        Si respondió &quot;Sí&quot; a alguna de las preguntas anteriores, por favor explique:
+                    <div className="w-full min-w-0">
+                      <Label htmlFor="creditExplanation" className="text-sm sm:text-base">
+                        If you answered &quot;Yes&quot; to any of the above questions, please explain:
                       </Label>
                       <Textarea
                         id="creditExplanation"
@@ -1229,7 +1274,8 @@ export default function ApplicationPage() {
                         value={formData.credit_explanation}
                         onChange={handleInputChange}
                         rows={4}
-                        placeholder="Proporcione detalles sobre cualquier respuesta afirmativa..."
+                        placeholder="Provide details about any affirmative answers..."
+                        className="w-full min-w-0"
                       />
                     </div>
                   </div>
@@ -1242,94 +1288,94 @@ export default function ApplicationPage() {
               <Card className="shadow-xl border-t-4 border-[rgb(23,46,123)]">
                 <CardHeader className="bg-gradient-to-r from-[rgb(23,46,123)] to-[rgb(18,37,98)] text-white rounded-t-lg py-4 px-4 sm:px-6">
                   <CardTitle className="text-xl sm:text-2xl font-black">
-                    Referencias
+                    References
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-5">
+                <CardContent className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-5">
                   {/* Bank References */}
                   <div className="space-y-3">
-                    <h3 className="text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
-                      Referencias Bancarias
+                    <h3 className="text-base sm:text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
+                      Bank References
                     </h3>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
                       <div className="space-y-3 p-3 bg-gray-50 rounded-lg">
-                        <h4 className="font-semibold text-sm text-gray-700">Referencia Bancaria 1</h4>
+                        <h4 className="font-semibold text-sm text-gray-700">Bank Reference 1</h4>
                         <div className="space-y-3">
                           <div>
-                            <Label htmlFor="bank1Name" className="text-sm">Nombre del Banco</Label>
+                            <Label htmlFor="bank1Name" className="text-sm">Bank Name</Label>
                             <Input
                               id="bank1Name"
                               name="bank1_name"
                               type="text"
                               value={formData.bank1_name}
                               onChange={handleInputChange}
-                              placeholder="Nombre del banco"
+                              placeholder="Bank name"
                             />
                           </div>
                           <div>
-                            <Label htmlFor="bank1AccountType" className="text-sm">Tipo de Cuenta</Label>
+                            <Label htmlFor="bank1AccountType" className="text-sm">Account Type</Label>
                             <Select
                               id="bank1AccountType"
                               name="bank1_account_type"
                               value={formData.bank1_account_type}
                               onChange={handleInputChange}
                             >
-                              <option value="">Selecciona</option>
+                              <option value="">Select</option>
                               <option value="checking">Checking</option>
                               <option value="savings">Savings</option>
-                              <option value="both">Ambas</option>
+                              <option value="both">Both</option>
                             </Select>
                           </div>
                           <div>
-                            <Label htmlFor="bank1AccountNo" className="text-sm">Número de Cuenta</Label>
+                            <Label htmlFor="bank1AccountNo" className="text-sm">Account Number</Label>
                             <Input
                               id="bank1AccountNo"
                               name="bank1_account_no"
                               type="text"
                               value={formData.bank1_account_no}
                               onChange={handleInputChange}
-                              placeholder="Número de cuenta"
+                              placeholder="Account number"
                             />
                           </div>
                         </div>
                       </div>
                       <div className="space-y-3 p-3 bg-gray-50 rounded-lg">
-                        <h4 className="font-semibold text-sm text-gray-700">Referencia Bancaria 2</h4>
+                        <h4 className="font-semibold text-sm text-gray-700">Bank Reference 2</h4>
                         <div className="space-y-3">
                           <div>
-                            <Label htmlFor="bank2Name" className="text-sm">Nombre del Banco</Label>
+                            <Label htmlFor="bank2Name" className="text-sm">Bank Name</Label>
                             <Input
                               id="bank2Name"
                               name="bank2_name"
                               type="text"
                               value={formData.bank2_name}
                               onChange={handleInputChange}
-                              placeholder="Nombre del banco"
+                              placeholder="Bank name"
                             />
                           </div>
                           <div>
-                            <Label htmlFor="bank2AccountType" className="text-sm">Tipo de Cuenta</Label>
+                            <Label htmlFor="bank2AccountType" className="text-sm">Account Type</Label>
                             <Select
                               id="bank2AccountType"
                               name="bank2_account_type"
                               value={formData.bank2_account_type}
                               onChange={handleInputChange}
                             >
-                              <option value="">Selecciona</option>
+                              <option value="">Select</option>
                               <option value="checking">Checking</option>
                               <option value="savings">Savings</option>
-                              <option value="both">Ambas</option>
+                              <option value="both">Both</option>
                             </Select>
                           </div>
                           <div>
-                            <Label htmlFor="bank2AccountNo" className="text-sm">Número de Cuenta</Label>
+                            <Label htmlFor="bank2AccountNo" className="text-sm">Account Number</Label>
                             <Input
                               id="bank2AccountNo"
                               name="bank2_account_no"
                               type="text"
                               value={formData.bank2_account_no}
                               onChange={handleInputChange}
-                              placeholder="Número de cuenta"
+                              placeholder="Account number"
                             />
                           </div>
                         </div>
@@ -1340,18 +1386,18 @@ export default function ApplicationPage() {
                   {/* Credit References */}
                   <div className="pt-4 border-t border-gray-200 space-y-3">
                     <h3 className="text-lg font-bold text-[rgb(23,46,123)] border-b border-gray-200 pb-2">
-                      Referencias de Crédito/Personales
+                      Credit/Personal References
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                       <div className="space-y-2 p-3 bg-gray-50 rounded-lg">
-                        <Label htmlFor="creditRef1Name" className="text-sm font-semibold">Referencia 1</Label>
+                        <Label htmlFor="creditRef1Name" className="text-sm font-semibold">Reference 1</Label>
                         <Input
                           id="creditRef1Name"
                           name="credit_ref1_name"
                           type="text"
                           value={formData.credit_ref1_name}
                           onChange={handleInputChange}
-                          placeholder="Nombre completo"
+                          placeholder="Full name"
                           className="mb-2"
                         />
                         <Input
@@ -1364,14 +1410,14 @@ export default function ApplicationPage() {
                         />
                       </div>
                       <div className="space-y-2 p-3 bg-gray-50 rounded-lg">
-                        <Label htmlFor="creditRef2Name" className="text-sm font-semibold">Referencia 2</Label>
+                        <Label htmlFor="creditRef2Name" className="text-sm font-semibold">Reference 2</Label>
                         <Input
                           id="creditRef2Name"
                           name="credit_ref2_name"
                           type="text"
                           value={formData.credit_ref2_name}
                           onChange={handleInputChange}
-                          placeholder="Nombre completo"
+                          placeholder="Full name"
                           className="mb-2"
                         />
                         <Input
@@ -1384,14 +1430,14 @@ export default function ApplicationPage() {
                         />
                       </div>
                       <div className="space-y-2 p-3 bg-gray-50 rounded-lg">
-                        <Label htmlFor="creditRef3Name" className="text-sm font-semibold">Referencia 3</Label>
+                        <Label htmlFor="creditRef3Name" className="text-sm font-semibold">Reference 3</Label>
                         <Input
                           id="creditRef3Name"
                           name="credit_ref3_name"
                           type="text"
                           value={formData.credit_ref3_name}
                           onChange={handleInputChange}
-                          placeholder="Nombre completo"
+                          placeholder="Full name"
                           className="mb-2"
                         />
                         <Input
@@ -1414,21 +1460,21 @@ export default function ApplicationPage() {
               <Card className="shadow-xl border-t-4 border-[rgb(180,22,40)]">
                 <CardHeader className="bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(144,18,32)] text-white rounded-t-lg py-4 px-4 sm:px-6">
                   <CardTitle className="text-xl sm:text-2xl font-black">
-                    Declaración y Autorización
+                    Statement and Authorization
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-4">
-                  <div className="space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                        Por mi firma a continuación, declaro que toda la información que he proporcionado en esta Aplicación de Alquiler de Florida es verdadera, precisa y completa. Reconozco que toda la información proporcionada es material y el Propietario confía en esta información para decidir si otorgar o denegar esta Aplicación.
+                <CardContent className="p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="bg-gray-50 p-3 sm:p-4 rounded-lg border border-gray-200">
+                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed break-words">
+                        By my signature below, I declare that all information I have provided in this Florida Rental Application is true, accurate, and complete. I acknowledge that all information provided is material and the Landlord relies on this information to decide whether to grant or deny this Application.
                       </p>
                     </div>
 
                     <div className="space-y-3">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <div>
-                          <Label htmlFor="signatureName">Nombre (Firma del Solicitante) *</Label>
+                          <Label htmlFor="signatureName">Name (Applicant Signature) *</Label>
                           <Input
                             id="signatureName"
                             name="signature_name"
@@ -1436,11 +1482,11 @@ export default function ApplicationPage() {
                             value={formData.signature_name}
                             onChange={handleInputChange}
                             required
-                            placeholder="Nombre completo"
+                            placeholder="Full name"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="signatureDate">Fecha *</Label>
+                          <Label htmlFor="signatureDate">Date *</Label>
                           <Input
                             id="signatureDate"
                             name="signature_date"
@@ -1454,18 +1500,18 @@ export default function ApplicationPage() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <div>
-                          <Label htmlFor="coSignatureName">Nombre (Co-Solicitante)</Label>
+                          <Label htmlFor="coSignatureName">Name (Co-Applicant)</Label>
                           <Input
                             id="coSignatureName"
                             name="co_signature_name"
                             type="text"
                             value={formData.co_signature_name}
                             onChange={handleInputChange}
-                            placeholder="Nombre completo"
+                            placeholder="Full name"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="coSignatureDate">Fecha</Label>
+                          <Label htmlFor="coSignatureDate">Date</Label>
                           <Input
                             id="coSignatureDate"
                             name="co_signature_date"
@@ -1479,17 +1525,17 @@ export default function ApplicationPage() {
 
                     <div className="pt-4 border-t border-gray-200">
                       <h3 className="text-lg font-bold text-[rgb(23,46,123)] mb-3 underline">
-                        AUTORIZACIÓN
+                        AUTHORIZATION
                       </h3>
                       <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
                         <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                          Autorizo al Propietario a solicitar y revisar mi historial crediticio y penal, e investigar la precisión de toda la información contenida en esta Aplicación de Alquiler de Florida. Además, autorizo a todos los bancos, empleadores y acreedores a proporcionar al Propietario cualquier información relacionada con mi crédito.
+                          I authorize the Landlord to request and review my credit and criminal history, and investigate the accuracy of all information contained in this Florida Rental Application. Furthermore, I authorize all banks, employers, and creditors to provide the Landlord with any information related to my credit.
                         </p>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <div>
-                          <Label htmlFor="authSignatureName">Nombre (Autorización) *</Label>
+                          <Label htmlFor="authSignatureName">Name (Authorization) *</Label>
                           <Input
                             id="authSignatureName"
                             name="auth_signature_name"
@@ -1497,11 +1543,11 @@ export default function ApplicationPage() {
                             value={formData.auth_signature_name}
                             onChange={handleInputChange}
                             required
-                            placeholder="Nombre completo"
+                            placeholder="Full name"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="authSignatureDate">Fecha *</Label>
+                          <Label htmlFor="authSignatureDate">Date *</Label>
                           <Input
                             id="authSignatureDate"
                             name="auth_signature_date"
@@ -1550,10 +1596,10 @@ export default function ApplicationPage() {
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         />
                       </svg>
-                      Enviando...
+                      Submitting...
                     </span>
                   ) : (
-                    "Enviar Aplicación"
+                    "Submit Application"
                   )}
                 </Button>
               </div>

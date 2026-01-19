@@ -41,7 +41,7 @@ export default function Home() {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl transition-all duration-500">
               <Image
                 src="/recursos/nosotros.jpg"
-                alt="Nosotros - Proyecta Business Group"
+                alt="About Us - Proyecta Business Group"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -52,16 +52,16 @@ export default function Home() {
             <div className="space-y-4 sm:space-y-6">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-3 sm:mb-4 leading-tight">
-                  Nuestro Propósito
+                  Our Purpose
                 </h2>
                 <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mb-6 sm:mb-8" />
               </div>
               <div className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-4 sm:space-y-6">
                 <p className="font-medium">
-                  Creemos firmemente en la importancia de <span className="font-bold text-[rgb(23,46,123)]">diversificar</span> tu patrimonio en una moneda tan fuerte como el <span className="font-bold text-[rgb(180,22,40)]">dólar</span>.
+                  We firmly believe in the importance of <span className="font-bold text-[rgb(23,46,123)]">diversifying</span> your wealth in a currency as strong as the <span className="font-bold text-[rgb(180,22,40)]">dollar</span>.
                 </p>
                 <p>
-                  Por este motivo brindamos a nuestros clientes una solución integral al momento de pensar en invertir y <span className="font-bold text-[rgb(23,46,123)]">generar ingresos pasivos</span>.
+                  For this reason, we provide our clients with a complete solution when it comes to investing and <span className="font-bold text-[rgb(23,46,123)]">generating passive income</span>.
                 </p>
               </div>
             </div>
@@ -74,15 +74,15 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-6 leading-tight">
-              ¿Quiénes somos?
+              About Us
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-10" />
             <div className="max-w-4xl mx-auto text-lg sm:text-xl text-gray-700 leading-relaxed space-y-6">
               <p className="font-medium">
-                Nuestra compañía se creó a partir de la necesidad de nuestros clientes de recibir una solución integral al momento de diversificar su patrimonio, y generar ingresos pasivos en dólares.
+                Our company was created from our clients&apos; need to receive a complete solution when diversifying their wealth and generating passive income in dollars.
               </p>
               <p>
-                Cuando pensamos en invertir fuera de nuestro país de origen surgen naturalmente muchas dudas, por esto, con nuestra experiencia de más de 5 años en el mercado Inmobiliario en los Estados Unidos, nos hemos dedicado a desarrollar proyectos de Inversión en Bienes Raíces transparentes, seguros y rentables.
+                When we think about investing outside our home country, many questions naturally arise. That&apos;s why, with over 5 years of experience in the Real Estate market in the United States, we have dedicated ourselves to developing transparent, secure, and profitable Real Estate Investment projects.
               </p>
             </div>
           </FadeIn>
@@ -95,14 +95,14 @@ export default function Home() {
                   {/* Imagen - Lado izquierdo */}
                   <div className="relative min-h-[350px] sm:min-h-[400px] lg:min-h-[600px] bg-gradient-to-br from-[rgb(23,46,123)]/5 to-[rgb(180,22,40)]/5 flex items-center justify-center p-6 sm:p-8 lg:p-12">
                     <div className="relative w-full max-w-[280px] sm:max-w-md aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl group">
-                      <Image
+        <Image
                         src="/img/juliana.webp"
-                        alt="Juliana Bonilla - Fundadora y CEO"
+                        alt="Juliana Bonilla - Founder and CEO"
                         fill
                         className="object-contain transition-transform duration-700 group-hover:scale-105"
                         sizes="(max-width: 640px) 280px, (max-width: 1024px) 100vw, 50vw"
-                        priority
-                      />
+          priority
+        />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     {/* Decoración de fondo */}
@@ -115,7 +115,7 @@ export default function Home() {
                     <div className="space-y-4 sm:space-y-6">
                       {/* Badge */}
                       <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[rgb(180,22,40)]/10 text-[rgb(180,22,40)] text-xs sm:text-sm font-semibold">
-                        Fundadora y CEO
+                        Founder and CEO
                       </div>
 
                       {/* Nombre */}
@@ -129,13 +129,13 @@ export default function Home() {
                       {/* Descripción */}
                       <div className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
                         <p className="font-medium">
-                          Juliana Bonilla aporta experiencia en administración y ventas, asegurando operaciones fluidas y un excelente servicio al cliente.
+                          Juliana Bonilla brings experience in administration and sales, ensuring smooth operations and excellent customer service.
                         </p>
                         <p>
-                          Está dedicada a ayudar a las familias a encontrar su casa soñada. Contamos con un equipo de profesionales que brinda un servicio de alta calidad a través de la excelencia, efectividad, ética, honestidad y confidencialidad.
+                          She is dedicated to helping families find their dream home. We have a team of professionals who provide high-quality service through excellence, effectiveness, ethics, honesty, and confidentiality.
                         </p>
                         <p>
-                          Te ofrecemos una solución integral al momento de invertir en Finca Raíz en el estado de la Florida de los Estados Unidos, siendo los aliados estratégicos de proyectos de construcción y de comercialización de viviendas nuevas.
+                          We offer you a complete solution when investing in Real Estate in the state of Florida, United States, being the strategic partners of construction projects and marketing of new homes.
                         </p>
                       </div>
 
@@ -149,9 +149,9 @@ export default function Home() {
                           variant="default"
                           size="default"
                           className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                          aria-label="Quiero recibir asesoría personalizada"
+                          aria-label="Get personalized consultation"
                         >
-                          <span className="whitespace-normal sm:whitespace-nowrap text-center">Quiero recibir asesoría personalizada</span>
+                          <span className="whitespace-normal sm:whitespace-nowrap text-center">Get Personalized Consultation</span>
                         </Button>
                       </div>
                     </div>
@@ -174,7 +174,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="inline-block text-6xl sm:text-7xl lg:text-8xl text-white/20 font-black mb-4">&quot;</div>
               <p className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight drop-shadow-2xl">
-                Mas que una inversión, creamos proyectos de Vida
+                More than an investment, we create Life projects
               </p>
               <div className="inline-block text-6xl sm:text-7xl lg:text-8xl text-white/20 font-black mt-4">&quot;</div>
             </div>
@@ -187,9 +187,9 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <FadeIn className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[rgb(23,46,123)] mb-4">
-              ¿Estas pensando en Invertir?
+              Are You Thinking About Investing?
             </h2>
-            <p className="text-xl text-gray-600">Algunos Tips…</p>
+            <p className="text-xl text-gray-600">Some Tips...</p>
           </FadeIn>
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -197,11 +197,11 @@ export default function Home() {
               <Card className="h-full flex flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-[rgb(180,22,40)] bg-gradient-to-br from-white to-gray-50">
                 <CardHeader className="flex-1 flex flex-col">
                   <div className="text-6xl font-black text-[rgb(180,22,40)] mb-4 leading-none">01</div>
-                  <CardTitle className="text-2xl sm:text-2xl font-bold mb-4">Leyes claras</CardTitle>
+                  <CardTitle className="text-2xl sm:text-2xl font-bold mb-4">Clear Laws</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    El mercado de bienes raíces en los Estados Unidos esta completamente reglamentado y cuenta con leyes claras para todas las transacciones inmobiliarias brindándonos tranquilidad en todo el proceso de acompañamiento para nuestros clientes.
+                    The real estate market in the United States is fully regulated and has clear laws for all real estate transactions, giving us peace of mind throughout the entire support process for our clients.
                   </p>
                 </CardContent>
               </Card>
@@ -211,11 +211,11 @@ export default function Home() {
               <Card className="h-full flex flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-[rgb(180,22,40)] bg-gradient-to-br from-white to-gray-50">
                 <CardHeader className="flex-1 flex flex-col">
                   <div className="text-6xl font-black text-[rgb(180,22,40)] mb-4 leading-none">02</div>
-                  <CardTitle className="text-2xl sm:text-2xl font-bold mb-4">Economía fuerte</CardTitle>
+                  <CardTitle className="text-2xl sm:text-2xl font-bold mb-4">Strong Economy</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Estados Unidos de América es la economía más grande e importante de la región por su volumen de producto interno bruto (PIB). Convirtiéndose en uno de los países con la mejor proyección financiera y de inversiones.
+                    The United States of America has the largest and most important economy in the region by its gross domestic product (GDP) volume. Becoming one of the countries with the best financial and investment projection.
                   </p>
                 </CardContent>
               </Card>
@@ -225,11 +225,11 @@ export default function Home() {
               <Card className="h-full flex flex-col hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-[rgb(180,22,40)] bg-gradient-to-br from-white to-gray-50">
                 <CardHeader className="flex-1 flex flex-col">
                   <div className="text-6xl font-black text-[rgb(180,22,40)] mb-4 leading-none">03</div>
-                  <CardTitle className="text-2xl sm:text-2xl font-bold mb-4">Inversión extranjera</CardTitle>
+                  <CardTitle className="text-2xl sm:text-2xl font-bold mb-4">Foreign Investment</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    El sistema bancario americano está abierto para la inversión extranjera, por esto contamos un aliado estratégico para acceder a un crédito de vivienda para extranjeros (Financiamiento del 70% del valor de la vivienda e intereses fijos hasta 30 años).
+                    The American banking system is open to foreign investment, which is why we have a strategic partner to access housing credit for foreigners (Financing of 70% of the property value and fixed interest rates for up to 30 years).
                   </p>
                 </CardContent>
               </Card>
@@ -243,11 +243,11 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
-              Inversiónes Seguras y Rentables
+              Secure and Profitable Investments
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-6" />
             <p className="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
-              <span className="font-bold">Te ofrecemos opciones de inversión Seguras y Rentables</span> en el mercado de <span className="font-bold text-[rgb(23,46,123)]">Propiedad Raíz</span> en los Estados Unidos.
+              <span className="font-bold">We offer you Secure and Profitable investment options</span> in the <span className="font-bold text-[rgb(23,46,123)]">Real Estate</span> market in the United States.
             </p>
           </FadeIn>
 
@@ -255,24 +255,24 @@ export default function Home() {
             <StaggerItem>
               <Card className="h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-500 border-t-4 border-[rgb(180,22,40)] bg-gradient-to-br from-white to-gray-50">
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-black text-[rgb(23,46,123)]">Invierte en conjunto</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-black text-[rgb(23,46,123)]">Invest Together</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-5">
                   <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                    Forma parte de un proyecto de construccción gracias a nuestro modelo <span className="font-bold text-[rgb(180,22,40)]">Better together!</span>
+                    Be part of a construction project thanks to our <span className="font-bold text-[rgb(180,22,40)]">Better together!</span> model
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <span className="text-[rgb(180,22,40)] mr-4 font-black text-2xl mt-1">•</span>
-                      <span className="text-gray-700 text-lg leading-relaxed">Puedes consolidar tú grupo de confianza.</span>
+                      <span className="text-gray-700 text-lg leading-relaxed">You can consolidate your trusted group.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[rgb(180,22,40)] mr-4 font-black text-2xl mt-1">•</span>
-                      <span className="text-gray-700 text-lg leading-relaxed">Rentabilidad promedio entre el <span className="font-bold text-[rgb(23,46,123)]">15% y el 20% EA</span> del valor invertido.</span>
+                      <span className="text-gray-700 text-lg leading-relaxed">Average profitability between <span className="font-bold text-[rgb(23,46,123)]">15% and 20% annually</span> of the invested value.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[rgb(180,22,40)] mr-4 font-black text-2xl mt-1">•</span>
-                      <span className="text-gray-700 text-lg leading-relaxed">Título inmobiliario compartido con los demás inversionistas.</span>
+                      <span className="text-gray-700 text-lg leading-relaxed">Real estate title shared with other investors.</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -282,24 +282,24 @@ export default function Home() {
             <StaggerItem>
               <Card className="h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-500 border-t-4 border-[rgb(23,46,123)] bg-gradient-to-br from-white to-gray-50">
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-black text-[rgb(23,46,123)]">Construye y Vende</CardTitle>
+                  <CardTitle className="text-2xl sm:text-3xl lg:text-4xl font-black text-[rgb(23,46,123)]">Build and Sell</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-5">
                   <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                    Invierte el 100% del desarrollo constructivo de un inmueble para lograr máximo retorno.
+                    Invest 100% of the construction development of a property to achieve maximum return.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <span className="text-[rgb(180,22,40)] mr-4 font-black text-2xl mt-1">•</span>
-                      <span className="text-gray-700 text-lg leading-relaxed">Construcción, seguimiento y comercialización del proyecto.</span>
+                      <span className="text-gray-700 text-lg leading-relaxed">Construction, follow-up, and marketing of the project.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[rgb(180,22,40)] mr-4 font-black text-2xl mt-1">•</span>
-                      <span className="text-gray-700 text-lg leading-relaxed">Rentabilidad promedio del <span className="font-bold text-[rgb(23,46,123)]">20% EA</span> del valor invertido.</span>
+                      <span className="text-gray-700 text-lg leading-relaxed">Average profitability of <span className="font-bold text-[rgb(23,46,123)]">20% annually</span> of the invested value.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[rgb(180,22,40)] mr-4 font-black text-2xl mt-1">•</span>
-                      <span className="text-gray-700 text-lg leading-relaxed">Único dueño de Título inmobiliario.</span>
+                      <span className="text-gray-700 text-lg leading-relaxed">Sole owner of the real estate title.</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -316,9 +316,9 @@ export default function Home() {
               variant="default"
               size="default"
               className="text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 mx-auto shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              aria-label="Quiero recibir asesoría personalizada"
+              aria-label="Get personalized consultation"
             >
-              <span className="whitespace-normal sm:whitespace-nowrap text-center">Quiero recibir asesoría personalizada</span>
+              <span className="whitespace-normal sm:whitespace-nowrap text-center">Get Personalized Consultation</span>
             </Button>
           </FadeIn>
         </div>
@@ -332,11 +332,11 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
-              Características de Bienes Raíces
+              Real Estate Features
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-6" />
             <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto font-medium">
-              Todo lo que necesitas saber sobre nuestras Propiedades
+              Everything you need to know about our Properties
             </p>
           </FadeIn>
 
@@ -346,7 +346,7 @@ export default function Home() {
                 <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/familia-casa.webp"
-                    alt="Lotes Amplios"
+                    alt="Large Lots"
                     fill
                     className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -357,12 +357,12 @@ export default function Home() {
                 </div>
                 <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
-                    Lotes Amplios
+                    Large Lots
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center flex-1 flex items-center justify-center">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Proyectos de construcción en amplios Lotes desde 1.000 mts2. o 10,000 SqFt.
+                    Construction projects on large lots from 1,000 m² or 10,000 SqFt.
                   </p>
                 </CardContent>
               </Card>
@@ -384,12 +384,12 @@ export default function Home() {
                 </div>
                 <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
-                    Casas
+                    Homes
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center flex-1 flex items-center justify-center">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Modelos de Casas, desde 150 a 300 mts2 de área construida.
+                    Home models, from 150 to 300 m² of built area.
                   </p>
                 </CardContent>
               </Card>
@@ -400,7 +400,7 @@ export default function Home() {
                 <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/interior.jpg"
-                    alt="Proceso de Entrega"
+                    alt="Delivery Process"
                     fill
                     className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -411,12 +411,12 @@ export default function Home() {
                 </div>
                 <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
-                    Proceso de Entrega
+                    Delivery Process
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center flex-1 flex items-center justify-center">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Entre 10 y 12 meses en ciclo de construcción y proceso de venta
+                    Between 10 and 12 months in construction cycle and sales process
                   </p>
                 </CardContent>
               </Card>
@@ -427,7 +427,7 @@ export default function Home() {
                 <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/nosotros.jpg"
-                    alt="Acabados Premium"
+                    alt="Premium Finishes"
                     fill
                     className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -438,12 +438,12 @@ export default function Home() {
                 </div>
                 <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
-                    Acabados Premium
+                    Premium Finishes
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center flex-1 flex items-center justify-center">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Acabados Premium de excelente calidad y Diseño Moderno.
+                    Premium finishes of excellent quality and Modern Design.
                   </p>
                 </CardContent>
               </Card>
@@ -454,7 +454,7 @@ export default function Home() {
                 <div className="relative h-48 bg-gradient-to-br from-[rgb(23,46,123)] to-[rgb(18,37,98)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/playa.webp"
-                    alt="Ubicación"
+                    alt="Location"
                     fill
                     className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -465,12 +465,12 @@ export default function Home() {
                 </div>
                 <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
-                    Ubicación
+                    Location
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center flex-1 flex items-center justify-center">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Ubicación estratégica en ciudades de alta valorización en Florida.
+                    Strategic location in high appreciation cities in Florida.
                   </p>
                 </CardContent>
               </Card>
@@ -481,7 +481,7 @@ export default function Home() {
                 <div className="relative h-48 bg-gradient-to-br from-[rgb(180,22,40)] to-[rgb(144,18,32)] overflow-hidden flex-shrink-0">
                   <Image
                     src="/recursos/couple-in-real.jpg"
-                    alt="Financiamiento"
+                    alt="Financing"
                     fill
                     className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -492,12 +492,12 @@ export default function Home() {
                 </div>
                 <CardHeader className="text-center flex-shrink-0">
                   <CardTitle className="text-xl sm:text-2xl text-[rgb(23,46,123)]">
-                    Financiamiento
+                    Financing
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center flex-1 flex items-center justify-center">
                   <p className="text-gray-700 leading-relaxed text-base">
-                    Opciones de financiamiento disponibles para extranjeros con hasta 70% del valor de la vivienda.
+                    Financing options available for foreigners with up to 70% of the property value.
                   </p>
                 </CardContent>
               </Card>
@@ -511,10 +511,10 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[rgb(23,46,123)] mb-4">
-              Nuestras Casas
+              Our Properties
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Modelos de casas disponibles con características premium
+              Available home models with premium features
             </p>
           </FadeIn>
 
@@ -549,12 +549,12 @@ export default function Home() {
                       <div className="text-center">
                         <BedDouble className="h-5 w-5 text-[rgb(180,22,40)] mx-auto mb-1" />
                         <div className="text-sm font-semibold text-gray-900">{model.bedrooms}</div>
-                        <div className="text-xs text-gray-500">Dormitorios</div>
+                        <div className="text-xs text-gray-500">Bedrooms</div>
                       </div>
                       <div className="text-center">
                         <Bath className="h-5 w-5 text-[rgb(180,22,40)] mx-auto mb-1" />
                         <div className="text-sm font-semibold text-gray-900">{model.bathrooms}</div>
-                        <div className="text-xs text-gray-500">Baños</div>
+                        <div className="text-xs text-gray-500">Bathrooms</div>
                       </div>
                       <div className="text-center">
                         <Building2 className="h-5 w-5 text-[rgb(180,22,40)] mx-auto mb-1" />
@@ -582,11 +582,11 @@ export default function Home() {
               </div>
               <div className="relative z-10">
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
-                  Y más modelos disponibles...
+                  And more models available...
                 </h3>
                 <div className="w-20 h-1 bg-gradient-to-r from-[rgb(180,22,40)] to-white rounded-full mx-auto mb-8" />
                 <p className="text-xl sm:text-2xl text-white/95 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
-                  Contamos con una amplia variedad de modelos para elegir. Contáctanos para conocer todos nuestros modelos disponibles y encontrar el perfecto para ti.
+                  We have a wide variety of models to choose from. Contact us to learn about all our available models and find the perfect one for you.
                 </p>
                 <Button
                   onClick={() => {
@@ -597,7 +597,7 @@ export default function Home() {
                   size="lg"
                   className="px-10 sm:px-12 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
                 >
-                  Ver todos los modelos
+                  View All Models
                 </Button>
               </div>
             </div>
@@ -615,7 +615,7 @@ export default function Home() {
           <FadeIn className="relative aspect-video rounded-3xl overflow-hidden mb-12 shadow-2xl group hover:shadow-3xl transition-all duration-500">
             <Image
               src="/recursos/investment.jpg"
-              alt="Inversión en Florida"
+              alt="Investment in Florida"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 1024px) 100vw, 80vw"
@@ -624,15 +624,15 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight">
-              Invierte ahora
+              Invest Now
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-white rounded-full mx-auto mb-10" />
             <div className="space-y-6 mb-12">
               <p className="text-xl sm:text-2xl text-white/95 leading-relaxed font-medium">
-                Estamos ubicados en zonas estratégicas y de alta valorización en Florida, debido a ser un paso obligado y cercano a importantes ciudades como Miami, Orlando, Tampa, Fort Myers.
+                We are located in strategic and high appreciation areas in Florida, being a mandatory stop and close to important cities like Miami, Orlando, Tampa, and Fort Myers.
               </p>
               <p className="text-xl sm:text-2xl text-white/95 leading-relaxed">
-                Florida es uno de los estados con alto potencial de desarrollo, lo cual permite una mezcla imbatible de costos de construcción y crecimientos sostenidos en la valorización de la vivienda.
+                Florida is one of the states with high development potential, which allows an unbeatable combination of construction costs and sustained growth in property appreciation.
               </p>
             </div>
             <Button
@@ -643,9 +643,9 @@ export default function Home() {
               variant="destructive"
               size="default"
               className="text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-4 sm:px-6 md:px-8 mx-auto shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
-              aria-label="Quiero recibir asesoría personalizada"
+              aria-label="Get personalized consultation"
             >
-              <span className="whitespace-normal sm:whitespace-nowrap text-center">Quiero recibir asesoría personalizada</span>
+              <span className="whitespace-normal sm:whitespace-nowrap text-center">Get Personalized Consultation</span>
             </Button>
           </FadeIn>
         </div>
@@ -656,11 +656,11 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
-              Contáctenos
+              Contact Us
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-6" />
             <p className="text-xl sm:text-2xl text-gray-600 font-medium">
-              Estamos listos para ayudarte a encontrar la inversión perfecta
+              We are ready to help you find the perfect investment
             </p>
           </FadeIn>
 
@@ -668,7 +668,7 @@ export default function Home() {
             {/* Información de contacto */}
             <div className="space-y-5 sm:space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-proyecta-blue mb-3 sm:mb-4 md:mb-6">Información de contacto</h3>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-proyecta-blue mb-3 sm:mb-4 md:mb-6">Contact Information</h3>
                 <div className="space-y-2.5 sm:space-y-3 md:space-y-4">
                   <div className="flex items-start">
                     <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 mt-1 shrink-0 text-proyecta-red" />
@@ -694,14 +694,14 @@ export default function Home() {
                   </div>
                   <div className="flex items-start">
                     <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 mt-1 shrink-0 text-proyecta-red" />
-                    <span className="text-gray-700 text-sm sm:text-base md:text-lg">Florida, Estados Unidos</span>
+                    <span className="text-gray-700 text-sm sm:text-base md:text-lg">Florida, United States</span>
                   </div>
                 </div>
               </div>
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="/recursos/interior.jpg"
-                  alt="Oficina Proyecta Business Group"
+                  alt="Proyecta Business Group Office"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -715,10 +715,10 @@ export default function Home() {
                 <Card className="p-4 sm:p-6 md:p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-[rgb(23,46,123)]">
                   <CardHeader className="text-center pb-3 sm:pb-4 md:pb-6">
                     <CardTitle className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[rgb(23,46,123)] mb-1.5 sm:mb-2 md:mb-3">
-                      Contáctanos ahora
+                      Contact Us Now
                     </CardTitle>
                     <CardDescription className="text-xs sm:text-sm md:text-base text-gray-600 px-1">
-                      Elige la forma más conveniente para ponerte en contacto con nosotros
+                      Choose the most convenient way to get in touch with us
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4 sm:space-y-6 md:space-y-8">
@@ -735,13 +735,13 @@ export default function Home() {
                         className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                       >
                         <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 shrink-0" />
-                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Contáctanos por WhatsApp</span>
+                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Contact Us via WhatsApp</span>
                       </Button>
                     </a>
                     <a
-                      href="mailto:investments@proyectabusinessgroup.com?subject=Consulta%20sobre%20Inversión%20en%20Bienes%20Raíces&body=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20de%20inversión%20en%20bienes%20raíces."
+                      href="mailto:investments@proyectabusinessgroup.com?subject=Inquiry%20about%20Real%20Estate%20Investment&body=Hello,%20I%20am%20interested%20in%20obtaining%20more%20information%20about%20your%20real%20estate%20investment%20services."
                       className="w-full block"
-                      aria-label="Enviar correo electrónico"
+                      aria-label="Send email"
                     >
                       <Button
                         variant="destructive"
@@ -749,7 +749,7 @@ export default function Home() {
                         className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                       >
                         <Mail className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 shrink-0" />
-                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Enviar Correo Electrónico</span>
+                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Send Email</span>
                       </Button>
                     </a>
                     <Link href="/application" className="w-full block">
@@ -757,10 +757,10 @@ export default function Home() {
                         variant="outline"
                         size="default"
                         className="w-full text-xs sm:text-sm md:text-base py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 border-2 border-[rgb(23,46,123)]"
-                        aria-label="Enviar aplicación"
+                        aria-label="Submit application"
                       >
                         <FileText className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 shrink-0" />
-                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Enviar Aplicación</span>
+                        <span className="whitespace-normal sm:whitespace-nowrap text-center">Submit Application</span>
                       </Button>
                     </Link>
                   </CardContent>
@@ -776,11 +776,11 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <FadeIn className="text-center mb-16 sm:mb-20">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[rgb(23,46,123)] mb-4 leading-tight">
-              Tiempos de Respuesta Rápidos
+              Fast Response Times
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto mb-6" />
             <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto font-medium">
-              Valoramos tu tiempo y respondemos rápidamente a todas las consultas
+              We value your time and respond quickly to all inquiries
             </p>
           </FadeIn>
 
@@ -788,10 +788,10 @@ export default function Home() {
             <StaggerItem>
               <Card className="h-full flex flex-col items-center text-center p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-t-4 border-[rgb(180,22,40)]">
                 <div className="text-5xl font-black text-[rgb(180,22,40)] mb-4">&lt; 24h</div>
-                <CardTitle className="text-xl sm:text-2xl mb-4">Llamadas Telefónicas</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl mb-4">Phone Calls</CardTitle>
                 <CardContent className="flex-1">
                   <p className="text-gray-700 leading-relaxed">
-                    Respondemos a todas las consultas telefónicas en menos de 24 horas
+                    We respond to all phone inquiries in less than 24 hours
                   </p>
                 </CardContent>
               </Card>
@@ -800,10 +800,10 @@ export default function Home() {
             <StaggerItem>
               <Card className="h-full flex flex-col items-center text-center p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-t-4 border-[rgb(23,46,123)]">
                 <div className="text-5xl font-black text-[rgb(23,46,123)] mb-4">&lt; 48h</div>
-                <CardTitle className="text-xl sm:text-2xl mb-4">Consultas por Email</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl mb-4">Email Inquiries</CardTitle>
                 <CardContent className="flex-1">
                   <p className="text-gray-700 leading-relaxed">
-                    Respuestas por email en menos de 48 horas
+                    Email responses in less than 48 hours
                   </p>
                 </CardContent>
               </Card>
@@ -811,11 +811,11 @@ export default function Home() {
 
             <StaggerItem>
               <Card className="h-full flex flex-col items-center text-center p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-t-4 border-[rgb(180,22,40)] sm:col-span-2 lg:col-span-1">
-                <div className="text-5xl font-black text-[rgb(180,22,40)] mb-4">Mismo Día</div>
-                <CardTitle className="text-xl sm:text-2xl mb-4">Citas</CardTitle>
+                <div className="text-5xl font-black text-[rgb(180,22,40)] mb-4">Same Day</div>
+                <CardTitle className="text-xl sm:text-2xl mb-4">Appointments</CardTitle>
                 <CardContent className="flex-1">
                   <p className="text-gray-700 leading-relaxed">
-                    Programa tu visita el mismo día
+                    Schedule your visit the same day
                   </p>
                 </CardContent>
               </Card>
@@ -841,13 +841,13 @@ export default function Home() {
                 />
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                Solución integral para Inversiones inmobiliarias seguras y rentables en Estados Unidos.
+                Complete solution for secure and profitable real estate investments in the United States.
               </p>
             </div>
 
             {/* Enlaces Rápidos */}
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Enlaces Rápidos</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
               <ul className="space-y-3">
                 <li>
                   <button
@@ -868,9 +868,9 @@ export default function Home() {
                       element?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
-                    aria-label="Ir a nuestro propósito"
+                    aria-label="Go to our purpose"
                   >
-                    Nuestro Propósito
+                    Our Purpose
                   </button>
                 </li>
                 <li>
@@ -880,9 +880,9 @@ export default function Home() {
                       element?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
-                    aria-label="Ir a quiénes somos"
+                    aria-label="Go to about us"
                   >
-                    ¿Quiénes somos?
+                    About Us
                   </button>
                 </li>
                 <li>
@@ -892,9 +892,9 @@ export default function Home() {
                       element?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
-                    aria-label="Ir a invertir"
+                    aria-label="Go to invest"
                   >
-                    ¿Quieres invertir?
+                    Want to Invest?
                   </button>
                 </li>
                 <li>
@@ -904,9 +904,9 @@ export default function Home() {
                       element?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
-                    aria-label="Ir a nuestras casas"
+                    aria-label="Go to our properties"
                   >
-                    Nuestras Casas
+                    Our Properties
                   </button>
                 </li>
                 <li>
@@ -916,9 +916,9 @@ export default function Home() {
                       element?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
-                    aria-label="Ir a contacto"
+                    aria-label="Go to contact"
                   >
-                    Contáctenos
+                    Contact Us
                   </button>
                 </li>
               </ul>
@@ -951,15 +951,15 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 shrink-0 text-[rgb(180,22,40)] mt-0.5" />
-                  <span className="text-gray-300 text-sm">Florida, Estados Unidos</span>
+                    <MapPin className="h-5 w-5 shrink-0 text-[rgb(180,22,40)] mt-0.5" />
+                  <span className="text-gray-300 text-sm">Florida, United States</span>
                 </li>
               </ul>
             </div>
 
             {/* Redes Sociales */}
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Síguenos</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Follow Us</h3>
               <div className="flex flex-col gap-3">
                 <a
                   href="https://facebook.com"
@@ -980,11 +980,11 @@ export default function Home() {
                 >
                   <Instagram className="h-5 w-5 mr-3 shrink-0" />
                   <span>Instagram</span>
-                </a>
-                <a
+          </a>
+          <a
                   href="https://wa.me/12392473557"
-                  target="_blank"
-                  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                   className="flex items-center text-gray-300 hover:text-white transition-colors text-sm group"
                   aria-label="WhatsApp"
                 >
@@ -999,14 +999,14 @@ export default function Home() {
           <div className="border-t border-white/20 pt-8 mt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-300 text-sm text-center md:text-left">
-                © {new Date().getFullYear()} Proyecta Business Group. Todos los derechos reservados.
+                © {new Date().getFullYear()} Proyecta Business Group. All rights reserved.
               </p>
               <div className="flex gap-6 text-sm text-gray-300">
                 <a href="#" className="hover:text-white transition-colors">
-                  Política de Privacidad
+                  Privacy Policy
                 </a>
                 <a href="#" className="hover:text-white transition-colors">
-                  Términos y Condiciones
+                  Terms and Conditions
                 </a>
               </div>
             </div>

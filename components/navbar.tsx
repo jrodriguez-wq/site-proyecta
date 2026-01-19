@@ -65,11 +65,11 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
 
   const navItems = [
     { label: "Home", id: "inicio" },
-    { label: "Nuestro Propósito", id: "proposito" },
-    { label: "¿Quiénes somos?", id: "quienes-somos" },
-    { label: "¿Quieres invertir?", id: "invertir" },
-    { label: "Nuestras Casas", id: "nuestras-casas" },
-    { label: "Contáctenos", id: "contacto" },
+    { label: "Our Purpose", id: "proposito" },
+    { label: "About Us", id: "quienes-somos" },
+    { label: "Want to Invest?", id: "invertir" },
+    { label: "Our Properties", id: "nuestras-casas" },
+    { label: "Contact Us", id: "contacto" },
   ];
 
   return (
@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
             <button
               onClick={handleLogoClick}
               className="flex items-center h-full"
-              aria-label="Ir a inicio"
+              aria-label="Go to home"
             >
               <Image
                 src="/Logotipo.png"
@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
                   "text-gray-700 hover:text-proyecta-red hover:bg-gray-100",
                   "focus:outline-none focus:ring-2 focus:ring-proyecta-blue focus:ring-offset-2"
                 )}
-                aria-label={`Ir a ${item.label}`}
+                aria-label={`Go to ${item.label}`}
               >
                 {item.label}
               </button>
@@ -123,18 +123,18 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
               variant="destructive"
               size="default"
               className="ml-1"
-              aria-label="Aplicar"
+              aria-label="Apply"
             >
-              <Link href="/application">Aplicar</Link>
+              <Link href="/application">Apply</Link>
             </Button>
             <Button
               onClick={() => handleScrollTo("contacto")}
               variant="default"
               size="default"
               className="ml-1"
-              aria-label="Contáctenos"
+              aria-label="Contact Us"
             >
-              Contáctenos
+              Contact Us
             </Button>
           </div>
 
@@ -142,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden text-proyecta-blue p-2 hover:bg-gray-100 rounded-full transition-colors"
-            aria-label="Menú"
+            aria-label="Menu"
             aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? (
@@ -166,7 +166,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
                     ? "bg-proyecta-blue text-white hover:bg-[rgb(18,37,98)]"
                     : "text-gray-700 hover:text-proyecta-red hover:bg-gray-100"
                 )}
-                aria-label={`Ir a ${item.label}`}
+                aria-label={`Go to ${item.label}`}
               >
                 {item.label}
               </button>
@@ -175,9 +175,9 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
               href="/application"
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold transition-colors bg-[rgb(180,22,40)] text-white hover:bg-[rgb(144,18,32)]"
-              aria-label="Aplicar"
+              aria-label="Apply"
             >
-              Aplicar
+              Apply
             </Link>
           </div>
         )}

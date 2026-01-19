@@ -25,11 +25,11 @@ export const HappyFamiliesGallery = () => {
           {/* Header */}
           <div className="text-center space-y-4 sm:space-y-6 px-2 sm:px-0">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-[rgb(23,46,123)] tracking-tight leading-tight">
-              Familias Felices
+              Happy Families
             </h2>
             <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(23,46,123)] rounded-full mx-auto"></div>
             <p className="text-base sm:text-lg lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
-              Únete a cientos de familias que han confiado en nosotros para su inversión inmobiliaria en Estados Unidos
+              Join hundreds of families who have trusted us for their real estate investment in the United States
             </p>
           </div>
           
@@ -42,7 +42,7 @@ export const HappyFamiliesGallery = () => {
               >
                 <Image
                   src={src}
-                  alt={`Cliente satisfecho ${index + 1} - Proyecta Business Group`}
+                  alt={`Happy Client ${index + 1} - Proyecta Business Group`}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"

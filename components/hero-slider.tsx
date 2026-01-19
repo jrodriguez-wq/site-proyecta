@@ -25,16 +25,16 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     image: "/img/hero/1w5a0754-e4.webp",
-    title: "Invierte en Bienes Raíces",
-    subtitle: "Diversifica tu patrimonio en Dólares",
-    description: "Solución integral para una inversión confiable, rentable y segura.",
+    title: "Invest in Real Estate",
+    subtitle: "Diversify Your Wealth in Dollars",
+    description: "Complete solution for a reliable, profitable, and secure investment.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
     secondaryButton: {
-      text: "Conocer más",
+      text: "Learn More",
       action: "scroll",
       target: "nuestras-casas",
     },
@@ -42,75 +42,75 @@ const heroSlides: HeroSlide[] = [
   {
     image: "/img/hero/1w5a0814-1.webp",
     title: "Proyecta Business Group",
-    subtitle: "Tu aliado en inversiones inmobiliarias",
-    description: "Proyectos transparentes, seguros y rentables.",
+    subtitle: "Your Real Estate Investment Partner",
+    description: "Transparent, secure, and profitable projects.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
   },
   {
     image: "/img/hero/1w5a1456-e5.webp",
-    title: "Inversión en Florida",
-    subtitle: "Zonas de alta valorización",
-    description: "Cerca de Miami, Orlando, Tampa y Fort Myers.",
+    title: "Investment in Florida",
+    subtitle: "High Appreciation Areas",
+    description: "Near Miami, Orlando, Tampa, and Fort Myers.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
     secondaryButton: {
-      text: "Ver proyectos",
+      text: "View Properties",
       action: "scroll",
       target: "nuestras-casas",
     },
   },
   {
     image: "/img/hero/1w5a1489-e5.webp",
-    title: "Diversifica tu Patrimonio",
-    subtitle: "En Bienes Raíces en USA",
-    description: "Inversión confiable y rentable en dólares.",
+    title: "Diversify Your Portfolio",
+    subtitle: "In US Real Estate",
+    description: "Reliable and profitable investment in dollars.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
   },
   {
     image: "/img/hero/1w5a1493-e5.webp",
-    title: "Más de 5 años de Experiencia",
-    subtitle: "En Real Estate en Estados Unidos",
-    description: "Asesoría profesional para tu inversión.",
+    title: "Over 5 Years of Experience",
+    subtitle: "In US Real Estate",
+    description: "Professional guidance for your investment.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
   },
   {
     image: "/img/hero/1w5a1505-e5.webp",
-    title: "Proyectos Transparentes",
-    subtitle: "Seguros y Rentables",
-    description: "Inversión en bienes raíces con garantía.",
+    title: "Transparent Projects",
+    subtitle: "Secure and Profitable",
+    description: "Real estate investment with guarantee.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
     secondaryButton: {
-      text: "Ver proyectos",
+      text: "View Properties",
       action: "scroll",
       target: "nuestras-casas",
     },
   },
   {
     image: "/img/hero/aurora.webp",
-    title: "Inversión Inteligente",
-    subtitle: "En Bienes Raíces en USA",
-    description: "Confiable, rentable y segura.",
+    title: "Smart Investment",
+    subtitle: "In US Real Estate",
+    description: "Reliable, profitable, and secure.",
     primaryButton: {
-      text: "Quiero recibir asesoría",
+      text: "Get Free Consultation",
       action: "scroll",
       target: "contacto",
     },
@@ -249,7 +249,7 @@ export const HeroSlider = () => {
                 ? "w-8 bg-[rgb(180,22,40)] shadow-lg shadow-[rgb(180,22,40)]/50"
                 : "w-2 bg-white/50 hover:bg-white/70 hover:w-3"
             )}
-            aria-label={`Ir a slide ${index + 1}`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
