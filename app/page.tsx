@@ -8,6 +8,7 @@ import { HomeModels } from "@/components/home-models";
 import { Features } from "@/components/features";
 import { CommunitiesShowcase } from "@/components/communities-showcase";
 import { WhyChooseUs } from "@/components/why-choose-us";
+import { AboutUs } from "@/components/about-us";
 import { Statistics } from "@/components/statistics";
 import { Testimonials } from "@/components/testimonials";
 import { HowItWorks } from "@/components/how-it-works";
@@ -54,40 +55,45 @@ export default function Home() {
         <CommunitiesShowcase />
       </AnimatedSection>
 
-      {/* 7. Why Choose Us - Trust and credibility building */}
+      {/* 7. About Us - Company information and team */}
       <AnimatedSection delay={150}>
+        <AboutUs />
+      </AnimatedSection>
+
+      {/* 8. Why Choose Us - Trust and credibility building */}
+      <AnimatedSection delay={200}>
         <WhyChooseUs />
       </AnimatedSection>
 
-      {/* 8. Statistics - Social proof with numbers and achievements */}
-      <AnimatedSection delay={200}>
+      {/* 9. Statistics - Social proof with numbers and achievements */}
+      <AnimatedSection delay={100}>
         <Statistics />
       </AnimatedSection>
 
-      {/* 9. Testimonials - Customer stories and reviews */}
-      <AnimatedSection delay={100}>
+      {/* 10. Testimonials - Customer stories and reviews */}
+      <AnimatedSection delay={150}>
         <Testimonials />
       </AnimatedSection>
 
-      {/* 10. How It Works - Process explanation (educational) */}
-      <AnimatedSection delay={150}>
+      {/* 11. How It Works - Process explanation (educational) */}
+      <AnimatedSection delay={200}>
         <HowItWorks />
       </AnimatedSection>
 
-      {/* 11. Location Map - Physical presence and contact info */}
+      {/* 12. Location Map - Physical presence and contact info */}
       <AnimatedSection delay={100}>
         <LocationMap />
       </AnimatedSection>
 
-              {/* 12. Final CTA - Last call to action before footer */}
-              <AnimatedSection delay={150}>
-                <CTASection />
-              </AnimatedSection>
+      {/* 13. Final CTA - Last call to action before footer */}
+      <AnimatedSection delay={150}>
+        <CTASection />
+      </AnimatedSection>
 
-              {/* 13. Contact Form - Contact form at the end */}
-              <AnimatedSection delay={100}>
-                <ContactForm />
-              </AnimatedSection>
+      {/* 14. Contact Form - Contact form at the end */}
+      <AnimatedSection delay={200}>
+        <ContactForm />
+      </AnimatedSection>
 
       {/* Footer */}
               <Footer />
