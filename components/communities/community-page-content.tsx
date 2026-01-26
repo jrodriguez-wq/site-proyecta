@@ -1,0 +1,492 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { Calendar, ArrowRight, X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { 
+  Fish, TreePine, Sailboat, Droplets, Users, 
+  Home, Square, Car 
+} from "lucide-react";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Fish,
+  TreePine,
+  Sailboat,
+  Waves: Droplets,
+  Droplets,
+  Users,
+  Home,
+  Square,
+  Car,
+};
+
+interface Activity {
+  icon: string;
+  title: string;
+  description: string;
+  image?: string;
+}
+
+interface Feature {
+  icon: string;
+  label: string;
+}
+
+interface CommunityPageContentProps {
+  aboutTitle: string;
+  aboutDescription: string;
+  activitiesTitle: string;
+  activities: Activity[];
+  features: Feature[];
+  futureTitle: string;
+  futureDescription: string;
+  scheduleTitle: string;
+  scheduleDescription: string;
+  scheduleButton: string;
+  galleryTitle: string;
+  galleryDescription?: string;
+  galleryImages: string[];
+  ctaTitle: string;
+  ctaDescription: string;
+  ctaButton: string;
+}
+
+export const CommunityPageContent = ({
+  aboutTitle,
+  aboutDescription,
+  activitiesTitle,
+  activities,
+  features,
+  futureTitle,
+  futureDescription,
+  scheduleTitle,
+  scheduleDescription,
+  scheduleButton,
+  galleryTitle,
+  galleryDescription,
+  galleryImages,
+  ctaTitle,
+  ctaDescription,
+  ctaButton,
+}: CommunityPageContentProps) => {
+  return (
+    <>
+      {/* About Section */}
+      <section className="py-10 md:py-14 lg:py-18 bg-white">
+        <div className="container mx-auto px-4 sm:px-5 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative overflow-hidden bg-gray-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 border border-gray-200/50 shadow-lg">
+              <div className="relative z-10">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-[rgb(23,46,123)] tracking-tight leading-tight">
+                  {aboutTitle}
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed max-w-4xl">
+                  {aboutDescription}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Family-Friendly Activities */}
+      <section className="py-10 md:py-14 lg:py-18 bg-[rgb(12,25,65)] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[rgb(180,22,40)] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[rgb(180,22,40)] rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-5 md:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-10 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight px-4">
+                {activitiesTitle}
+              </h2>
+              <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] via-[rgb(180,22,40)]/80 to-[rgb(180,22,40)] rounded-full mx-auto"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {activities.map((activity, index) => {
+                const Icon = iconMap[activity.icon];
+                if (!Icon) return null;
+                return (
+                  <Card 
+                    key={index} 
+                    className="border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:border-[rgb(180,22,40)]/50 hover:bg-white/15 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
+                  >
+                    <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-gray-100">
+                      {activity.image ? (
+                        <Image
+                          src={activity.image}
+                          alt={activity.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-[rgb(180,22,40)]/20 via-[rgb(180,22,40)]/10 to-gray-100 flex items-center justify-center">
+                          <Icon className="w-16 h-16 text-[rgb(180,22,40)]/40" />
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[rgb(12,25,65)]/90 via-[rgb(12,25,65)]/20 to-transparent"></div>
+                      <div className="absolute top-4 right-4">
+                        <div className="p-3 bg-white/20 backdrop-blur-md rounded-xl border border-white/30">
+                          <Icon className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                    </div>
+                    <CardContent className="pt-4 sm:pt-5 md:pt-6 p-4 sm:p-5 md:p-6">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-black text-white mb-2 sm:mb-3 leading-tight">
+                        {activity.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed">
+                        {activity.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-10 md:py-14 lg:py-18 bg-white">
+        <div className="container mx-auto px-4 sm:px-5 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12">
+              {features.map((feature, index) => {
+                const Icon = iconMap[feature.icon];
+                if (!Icon) return null;
+                return (
+                  <Card key={index} className="border-2 border-[rgb(23,46,123)]/20 hover:border-[rgb(23,46,123)]/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group text-center bg-gradient-to-br from-[rgb(23,46,123)]/5 via-white to-white">
+                    <CardContent className="pt-8 pb-8 p-6">
+                      <div className="flex flex-col items-center space-y-6">
+                        <div className="p-5 bg-[rgb(23,46,123)]/10 rounded-2xl group-hover:bg-[rgb(23,46,123)]/20 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                          <Icon className="w-10 h-10 md:w-12 md:h-12 text-[rgb(23,46,123)]" />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-gray-900 leading-tight">
+                            {feature.label}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Future of Florida Section */}
+      <section className="py-10 md:py-14 lg:py-18 bg-[rgb(12,25,65)] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[rgb(180,22,40)] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[rgb(180,22,40)] rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-5 md:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto py-12 sm:py-16 md:py-20 lg:py-24">
+            <div className="text-center space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight leading-tight px-4">
+                {futureTitle}
+              </h2>
+              <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] via-[rgb(180,22,40)]/80 to-[rgb(180,22,40)] rounded-full mx-auto"></div>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed px-4">
+                {futureDescription}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Schedule Your Visit Section */}
+      <section className="py-10 md:py-14 lg:py-18 bg-white">
+        <div className="container mx-auto px-4 sm:px-5 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <Card className="border-2 border-[rgb(23,46,123)]/20 shadow-2xl bg-gradient-to-br from-[rgb(23,46,123)]/10 via-[rgb(23,46,123)]/5 to-white overflow-hidden">
+              <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-16">
+                <div className="text-center space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+                  <div className="flex justify-center">
+                    <div className="p-3 sm:p-4 md:p-5 bg-[rgb(23,46,123)]/20 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                      <Calendar className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-[rgb(23,46,123)]" />
+                    </div>
+                  </div>
+                  <div className="space-y-3 sm:space-y-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[rgb(23,46,123)] tracking-tight leading-tight px-4">
+                      {scheduleTitle}
+                    </h2>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+                      {scheduleDescription}
+                    </p>
+                  </div>
+                  <div className="pt-3 sm:pt-4">
+                    <Button asChild size="lg" className="w-full sm:w-auto bg-[rgb(180,22,40)] hover:bg-[rgb(144,18,32)] text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 lg:py-7 text-sm sm:text-base md:text-lg font-black shadow-2xl shadow-[rgb(180,22,40)]/30 hover:shadow-[rgb(180,22,40)]/40 transition-all duration-300 group hover:scale-105">
+                      <Link href="/contact">
+                        {scheduleButton}
+                        <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery - Interactive */}
+      <InteractiveGallery 
+        galleryTitle={galleryTitle}
+        galleryDescription={galleryDescription}
+        galleryImages={galleryImages}
+      />
+
+      {/* CTA Section */}
+      <section className="py-10 md:py-14 lg:py-18 bg-white">
+        <div className="container mx-auto px-4 sm:px-5 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center">
+              <Card className="border-2 border-[rgb(23,46,123)]/20 shadow-2xl bg-gradient-to-br from-[rgb(23,46,123)]/10 via-[rgb(23,46,123)]/5 to-white overflow-hidden">
+                <CardContent className="pt-8 sm:pt-10 md:pt-12 lg:pt-16 xl:pt-20 pb-8 sm:pb-10 md:pb-12 lg:pb-16 xl:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-[rgb(23,46,123)] tracking-tight leading-tight">
+                    {ctaTitle}
+                  </h2>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-6 sm:mb-7 md:mb-8 lg:mb-10 max-w-3xl mx-auto leading-relaxed">
+                    {ctaDescription}
+                  </p>
+                  <Button asChild size="lg" className="w-full sm:w-auto bg-[rgb(180,22,40)] hover:bg-[rgb(144,18,32)] text-white px-6 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 text-sm sm:text-base md:text-lg lg:text-xl font-black shadow-2xl shadow-[rgb(180,22,40)]/30 hover:shadow-[rgb(180,22,40)]/40 transition-all duration-300 hover:scale-105">
+                    <Link href="/rent-to-own">
+                      {ctaButton}
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+// Componente de galería interactiva
+const InteractiveGallery = ({
+  galleryTitle,
+  galleryDescription,
+  galleryImages,
+}: {
+  galleryTitle: string;
+  galleryDescription?: string;
+  galleryImages: string[];
+}) => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const openGallery = (index: number) => {
+    setSelectedImage(index);
+  };
+
+  const closeGallery = () => {
+    setSelectedImage(null);
+  };
+
+  const changeImage = (direction: number) => {
+    if (selectedImage === null) return;
+    const newIndex = selectedImage + direction;
+    if (newIndex < 0) {
+      setSelectedImage(galleryImages.length - 1);
+    } else if (newIndex >= galleryImages.length) {
+      setSelectedImage(0);
+    } else {
+      setSelectedImage(newIndex);
+    }
+  };
+
+  useEffect(() => {
+    if (selectedImage === null) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeGallery();
+      if (e.key === "ArrowLeft") changeImage(-1);
+      if (e.key === "ArrowRight") changeImage(1);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage]);
+
+  return (
+    <>
+      <section className="py-10 md:py-14 lg:py-18 bg-[rgb(12,25,65)] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[rgb(180,22,40)] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[rgb(180,22,40)] rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-5 md:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto space-y-8 md:space-y-10 lg:space-y-12">
+            <div className="text-center space-y-3 sm:space-y-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight leading-tight px-4">
+                {galleryTitle}
+              </h2>
+              <div className="w-20 sm:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[rgb(180,22,40)] via-[rgb(180,22,40)]/80 to-[rgb(180,22,40)] rounded-full mx-auto"></div>
+              {galleryDescription && (
+                <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
+                  {galleryDescription}
+                </p>
+              )}
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+              {galleryImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => openGallery(index)}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      openGallery(index);
+                    }
+                  }}
+                  className={cn(
+                    "relative w-full aspect-square rounded-xl sm:rounded-2xl overflow-hidden",
+                    "group cursor-pointer transition-all duration-300",
+                    "border-2 border-white/20 hover:border-[rgb(180,22,40)]/60",
+                    "shadow-lg hover:shadow-2xl hover:shadow-[rgb(180,22,40)]/20",
+                    "hover:scale-105 active:scale-100",
+                    hoveredIndex === index && "ring-2 ring-[rgb(180,22,40)]/50 ring-offset-2 ring-offset-[rgb(12,25,65)]"
+                  )}
+                  aria-label={`View image ${index + 1} of ${galleryImages.length}`}
+                  type="button"
+                >
+                  <Image
+                    src={image}
+                    alt={`${galleryTitle} - ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    quality={85}
+                  />
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="p-3 bg-white/90 backdrop-blur-sm rounded-full border-2 border-[rgb(180,22,40)]/50 shadow-xl">
+                      <Maximize2 className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(180,22,40)]" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-2 right-2 px-2 py-1 bg-white/80 backdrop-blur-sm rounded-lg text-xs font-semibold text-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {index + 1}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Modal de galería */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+          onClick={closeGallery}
+          tabIndex={-1}
+        >
+          <div
+            className="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-hidden shadow-2xl border-2 border-gray-200 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative bg-gray-100 h-[90vh]">
+              <Image
+                src={galleryImages[selectedImage]}
+                alt={`${galleryTitle} - ${selectedImage + 1}`}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 80vw"
+                quality={95}
+                priority
+              />
+
+              {galleryImages.length > 1 && (
+                <>
+                  <button
+                    onClick={() => changeImage(-1)}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors border border-gray-200 z-10 shadow-lg hover:scale-110"
+                    aria-label="Previous image"
+                    type="button"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-gray-900" />
+                  </button>
+                  <button
+                    onClick={() => changeImage(1)}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors border border-gray-200 z-10 shadow-lg hover:scale-110"
+                    aria-label="Next image"
+                    type="button"
+                  >
+                    <ChevronRight className="w-6 h-6 text-gray-900" />
+                  </button>
+                </>
+              )}
+
+              {galleryImages.length > 1 && (
+                <div className="absolute bottom-4 left-4 right-4 flex gap-2 justify-center z-10 overflow-x-auto pb-2">
+                  {galleryImages.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(index)}
+                      className={cn(
+                        "w-16 h-12 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0",
+                        index === selectedImage
+                          ? "border-[rgb(23,46,123)] scale-105 shadow-lg"
+                          : "border-transparent opacity-70 hover:opacity-100"
+                      )}
+                      aria-label={`View image ${index + 1}`}
+                      type="button"
+                    >
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={img}
+                          alt={`Thumbnail ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="64px"
+                        />
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {galleryImages.length > 1 && (
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 shadow-lg">
+                  <span className="text-gray-900 text-sm font-medium">
+                    {selectedImage + 1} / {galleryImages.length}
+                  </span>
+                </div>
+              )}
+
+              <button
+                onClick={closeGallery}
+                className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors border border-gray-200 z-10 shadow-lg hover:scale-110"
+                aria-label="Close gallery"
+                type="button"
+              >
+                <X className="w-5 h-5 text-gray-900" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};

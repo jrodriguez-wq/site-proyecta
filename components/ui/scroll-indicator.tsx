@@ -1,0 +1,138 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
+
+interface ScrollIndicatorProps {
+  className?: string;
+  onClick?: () => void;
+  targetId?: string;
+}
+
+export const ScrollIndicator = ({ 
+  className = "", 
+  onClick,
+  targetId 
+}: ScrollIndicatorProps) => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+      return;
+    }
+
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
+      className={`absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 ${className}`}
+    >
+      <motion.button
+        onClick={handleClick}
+        className="flex flex-col items-center gap-1.5 group focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent rounded-full p-2"
+        aria-label="Scroll down to see more content"
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 1.8, duration: 0.4, ease: "easeOut" }}
+      >
+        <div className="flex flex-col items-center gap-1.5 px-2.5 py-2 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700/50 shadow-2xl group-hover:bg-slate-900/95 group-hover:border-slate-600/70 transition-all duration-300">
+          <motion.div
+            className="flex flex-col items-center gap-0.5"
+            animate={{
+              y: [0, 4, 0],
+            }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <motion.div
+              animate={{
+                opacity: [0.5, 0.9, 0.5],
+              }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0,
+              }}
+            >
+              <ChevronDown 
+                className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" 
+                strokeWidth={2.5}
+              />
+            </motion.div>
+            
+            <motion.div
+              animate={{
+                opacity: [0.7, 1, 0.7],
+              }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.2,
+              }}
+            >
+              <ChevronDown 
+                className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)] group-hover:scale-110 transition-transform duration-300" 
+                strokeWidth={3}
+              />
+            </motion.div>
+            
+            <motion.div
+              animate={{
+                opacity: [0.3, 0.6, 0.3],
+                y: [0, 3, 0],
+              }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.4,
+              }}
+            >
+              <ChevronDown 
+                className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" 
+                strokeWidth={2}
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.button>
+    </motion.div>
+  );
+};
