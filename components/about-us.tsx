@@ -78,7 +78,8 @@ export const AboutUs = () => {
                   <div className="pt-4">
                     <Button
                       asChild
-                      className="bg-gradient-to-r from-proyecta-red via-proyecta-red to-[rgb(144,18,32)] hover:from-[rgb(144,18,32)] hover:via-proyecta-red hover:to-proyecta-red text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl border border-proyecta-red/20"
+                      variant="destructive"
+                      className="!bg-gradient-to-r !from-proyecta-red !via-proyecta-red !to-[rgb(144,18,32)] hover:!from-[rgb(144,18,32)] hover:!via-proyecta-red hover:!to-proyecta-red !text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl border border-proyecta-red/20"
                       size="lg"
                     >
                       <Link href="/#contacto" className="flex items-center gap-2">
