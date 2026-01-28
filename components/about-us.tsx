@@ -36,16 +36,17 @@ export const AboutUs = () => {
               <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0">
                 {/* Imagen - Lado izquierdo */}
                 <div className="relative min-h-[350px] sm:min-h-[400px] lg:min-h-[600px] bg-gradient-to-br from-proyecta-blue/5 to-proyecta-red/5 flex items-center justify-center p-6 sm:p-8 lg:p-12">
-                  <div className="relative w-full max-w-[280px] sm:max-w-md aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl group">
+                  <div className="relative w-full max-w-[280px] sm:max-w-md rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl group flex items-center justify-center">
                     <Image
                       src="/img/juliana.webp"
                       alt="Juliana Bonilla - Founder and CEO"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      width={400}
+                      height={600}
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </div>
                 </div>
 

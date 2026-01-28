@@ -62,16 +62,30 @@ export const ArticleContent = ({ post }: ArticleContentProps) => {
 
       {/* Featured Image */}
       {post.frontmatter.image && (
-        <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden mb-8 md:mb-12 shadow-xl">
-          <Image
-            src={imageSrc}
-            alt={post.frontmatter.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-            priority
-          />
-        </div>
+        imageSrc.includes('juliana') ? (
+          <div className="relative w-full rounded-2xl overflow-hidden mb-8 md:mb-12 shadow-xl flex items-center justify-center bg-gradient-to-br from-proyecta-blue/5 to-proyecta-red/5 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] p-8">
+            <Image
+              src={imageSrc}
+              alt={post.frontmatter.title}
+              width={400}
+              height={600}
+              className="w-full h-auto max-w-md object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              priority
+            />
+          </div>
+        ) : (
+          <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden mb-8 md:mb-12 shadow-xl">
+            <Image
+              src={imageSrc}
+              alt={post.frontmatter.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              priority
+            />
+          </div>
+        )
       )}
 
       {/* Content */}
