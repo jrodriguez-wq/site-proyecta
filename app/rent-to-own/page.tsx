@@ -53,7 +53,7 @@ const RTO_PRICES: Record<string, string> = {
   emelia: "$2,800/month",
 };
 
-const phone = "+1 (239) 439 50 75";
+const phone = "(239) 247-3557";
 const phoneClean = phone.replace(/[^0-9]/g, "");
 
 export default function RentToOwnPage() {

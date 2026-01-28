@@ -146,8 +146,8 @@ At Proyecta Business Group, we make the Rent-to-Own process simple and transpare
 Ready to start your journey to homeownership? Contact us today to learn more about our Rent-to-Own program and available properties in LaBelle and Lehigh Acres, Florida.
 
 **Contact Information:**
-- Phone: +1 (239) 439 50 75
-- Email: investments@proyectabusinessgroup.com
+- Phone: +1 (239) 247-3557
+- Email: customerservice@proyectabusinessgroup.com
 - WhatsApp: Available 24/7
 
 Don't let traditional barriers stop you from achieving your dream of homeownership. Rent-to-Own might be the perfect solution for you.

@@ -11,10 +11,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/animated-section";
 
-const phone = "+1 (239) 439 50 75";
+const phone = "(239) 247-3557";
 const phoneClean = phone.replace(/[^0-9]/g, ""); // Remove all non-digits for tel: links
 const whatsappNumber = "12392473557";
-const email = "investments@proyectabusinessgroup.com";
+const email = "customerservice@proyectabusinessgroup.com";
 const address = "LaBelle, Florida";
 
 export default function ContactPage() {

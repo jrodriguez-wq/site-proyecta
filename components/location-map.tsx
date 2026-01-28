@@ -5,10 +5,10 @@ import { MapPin, Phone, ExternalLink, Mail, MessageCircle } from "lucide-react";
 
 const address = "LaBelle, Florida";
 const googleMapsUrl = "https://www.google.com/maps/search/LaBelle,+Florida";
-const phone = "+1 (239) 439 50 75";
+const phone = "(239) 247-3557";
 const phoneClean = phone.replace(/[^0-9]/g, ""); // Remove all non-digits for tel: links
 const whatsappNumber = "12392473557";
-const email = "investments@proyectabusinessgroup.com";
+const email = "customerservice@proyectabusinessgroup.com";
 
 export const LocationMap = () => {
   return (

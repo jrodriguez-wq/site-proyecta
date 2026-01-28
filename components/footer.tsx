@@ -5,8 +5,8 @@ import Image from "next/image";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const address = "LaBelle, Florida";
-const phone = "+1 (239) 439 50 75";
-const email = "investments@proyectabusinessgroup.com";
+const phone = "(239) 247-3557";
+const email = "customerservice@proyectabusinessgroup.com";
 
 const footerSections = [
   {

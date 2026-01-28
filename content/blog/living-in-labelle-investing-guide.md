@@ -338,8 +338,8 @@ At Proyecta Business Group, we're here to help you navigate your LaBelle investm
 
 **Ready to invest in LaBelle? Contact us today:**
 
-- **Phone:** +1 (239) 439 50 75
-- **Email:** investments@proyectabusinessgroup.com
+- **Phone:** +1 (239) 247-3557
+- **Email:** customerservice@proyectabusinessgroup.com
 - **WhatsApp:** Available 24/7
 
 Don't miss out on the opportunities LaBelle has to offer. Start your investment journey today and discover why LaBelle, Florida, is the perfect place for your next real estate investment.

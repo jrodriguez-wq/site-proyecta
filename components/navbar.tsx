@@ -24,7 +24,7 @@ interface NavigationItem {
   }>;
 }
 
-const phone = "+1 (239) 439 50 75";
+const phone = "(239) 247-3557";
 
 const navigationItems: NavigationItem[] = [
   {
