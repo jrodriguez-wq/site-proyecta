@@ -6,16 +6,23 @@ import { ContactForm } from "@/components/contact-form";
 import { LocationMap } from "@/components/location-map";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Headphones, Building2, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { CONTACT } from "@/lib/config/contact";
 
-const phone = "(239) 247-3557";
-const phoneClean = phone.replace(/[^0-9]/g, ""); // Remove all non-digits for tel: links
-const whatsappNumber = "12392473557";
-const email = "customerservice@proyectafl.com";
-const address = "LaBelle, Florida";
+const phone = CONTACT.phone;
+const phoneClean = CONTACT.phone.replace(/[^0-9]/g, "");
+const whatsappNumber = CONTACT.whatsapp;
+const email = CONTACT.mainEmail;
+const address = CONTACT.address;
+
+const emailContacts = [
+  { email: CONTACT.emails.customerService, label: "Customer Service", description: "General inquiries, support, and questions", icon: Headphones },
+  { email: CONTACT.emails.investments, label: "Investments", description: "Investment opportunities and Rent to Own", icon: TrendingUp },
+  { email: CONTACT.emails.propertyManagement, label: "Property Management", description: "Property management and leasing", icon: Building2 },
+] as const;
 
 export default function ContactPage() {
   return (
@@ -137,7 +144,7 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
 
-                {/* Email Card */}
+                {/* Email Card - Main contact */}
                 <Card className="hover:shadow-xl transition-all duration-300 border-2 border-[rgb(23,46,123)]/20 hover:border-[rgb(23,46,123)]/50 group hover:-translate-y-1">
                   <CardContent className="p-6 sm:p-7">
                     <div className="flex items-start gap-4">
@@ -146,7 +153,7 @@ export default function ContactPage() {
                       </div>
                       <div className="flex-1 w-full min-w-0">
                         <p className="font-semibold text-xs text-muted-foreground mb-2 uppercase tracking-wider">
-                          Email
+                          Email (General)
                         </p>
                         <a
                           href={`mailto:${email}`}
@@ -201,6 +208,39 @@ export default function ContactPage() {
                     </div>
                   </CardContent>
                 </Card>
+              </div>
+
+              {/* All email addresses by purpose */}
+              <div className="rounded-2xl border-2 border-[rgb(23,46,123)]/20 bg-gradient-to-br from-[rgb(23,46,123)]/5 to-transparent p-6 sm:p-8">
+                <h3 className="text-base sm:text-lg font-black text-[rgb(23,46,123)] mb-4 flex items-center gap-2">
+                  <Mail className="h-5 w-5" />
+                  Email by department
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                  {emailContacts.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <a
+                        key={item.email}
+                        href={`mailto:${item.email}`}
+                        className="block p-4 rounded-xl border border-[rgb(23,46,123)]/20 hover:border-[rgb(23,46,123)]/50 hover:bg-white/80 transition-all duration-300 group"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 bg-[rgb(23,46,123)]/20 rounded-lg group-hover:bg-[rgb(23,46,123)]/30 shrink-0">
+                            <Icon className="h-4 w-4 text-[rgb(23,46,123)]" />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="font-bold text-sm text-[rgb(23,46,123)] mb-0.5">{item.label}</p>
+                            <p className="text-xs text-muted-foreground mb-1.5 line-clamp-2">{item.description}</p>
+                            <span className="text-xs sm:text-sm font-semibold text-foreground break-all group-hover:text-[rgb(23,46,123)]">
+                              {item.email}
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
 
               {/* Action Buttons */}
