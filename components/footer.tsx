@@ -6,7 +6,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react
 
 const address = "LaBelle, Florida";
 const phone = "(239) 247-3557";
-const email = "customerservice@proyectabusinessgroup.com";
+const email = "customerservice@proyectafl.com";
 
 const footerSections = [
   {
@@ -158,7 +158,7 @@ export const Footer = () => {
         <div className="mt-10 sm:mt-12 md:mt-16 pt-6 sm:pt-8 border-t border-white/20">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-white/70">
             <p>
-              Copyright © 2026 Proyecta Business Group. All Rights Reserved
+              Copyright © 2026 Proyecta Business Group · proyectafl.com
             </p>
             <div className="flex gap-4">
               <Link href="/privacy-policy" className="hover:text-white transition-colors">

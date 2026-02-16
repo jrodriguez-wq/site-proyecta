@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import { SITE_URL } from "@/lib/config/contact";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -9,8 +10,15 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Proyecta Business Group - Inversión en Bienes Raíces en Estados Unidos",
-  description: "Invierte en Bienes Raíces en los Estados Unidos y diversifica tu patrimonio en Dólares. Solución integral para una inversión confiable, rentable y segura.",
+  metadataBase: new URL(SITE_URL),
+  title: "Proyecta - Inversión en Bienes Raíces en Florida | proyectafl.com",
+  description: "Invierte en Bienes Raíces en los Estados Unidos y diversifica tu patrimonio en Dólares. Solución integral para una inversión confiable, rentable y segura. Rent to Own en LaBelle y Lehigh Acres.",
+  keywords: ["proyecta", "proyectafl", "real estate Florida", "rent to own", "LaBelle", "Lehigh Acres", "inversión bienes raíces"],
+  openGraph: {
+    url: SITE_URL,
+    siteName: "Proyecta",
+    locale: "en_US",
+  },
   icons: {
     icon: "/icon.ico",
     shortcut: "/icon.ico",

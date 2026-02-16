@@ -14,7 +14,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 const phone = "(239) 247-3557";
 const phoneClean = phone.replace(/[^0-9]/g, ""); // Remove all non-digits for tel: links
 const whatsappNumber = "12392473557";
-const email = "customerservice@proyectabusinessgroup.com";
+const email = "customerservice@proyectafl.com";
 const address = "LaBelle, Florida";
 
 export default function ContactPage() {

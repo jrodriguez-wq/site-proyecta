@@ -134,7 +134,7 @@ Homeownership is not just a destination—it's a journey worth taking, with the 
 **Ready to start your journey? Contact us today:**
 
 - **Phone:** +1 (239) 247-3557
-- **Email:** customerservice@proyectabusinessgroup.com
+- **Email:** customerservice@proyectafl.com
 - **WhatsApp:** Available 24/7
 
 Don't let traditional barriers stop you from achieving your dream of homeownership. Rent-to-Own might be the perfect solution for you.

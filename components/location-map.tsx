@@ -8,7 +8,7 @@ const googleMapsUrl = "https://www.google.com/maps/search/LaBelle,+Florida";
 const phone = "(239) 247-3557";
 const phoneClean = phone.replace(/[^0-9]/g, ""); // Remove all non-digits for tel: links
 const whatsappNumber = "12392473557";
-const email = "customerservice@proyectabusinessgroup.com";
+const email = "customerservice@proyectafl.com";
 
 export const LocationMap = () => {
   return (
