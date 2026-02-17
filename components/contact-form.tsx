@@ -33,10 +33,20 @@ export const ContactForm = () => {
     setSubmitStatus("idle");
 
     try {
-      // Here you would typically send the form data to your backend/API
-      // For now, we'll simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+        return;
+      }
+
       setSubmitStatus("success");
       setFormData({
         name: "",
@@ -44,16 +54,10 @@ export const ContactForm = () => {
         phone: "",
         interest: "",
       });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus("idle");
-      }, 5000);
-    } catch (error) {
+      setTimeout(() => setSubmitStatus("idle"), 5000);
+    } catch {
       setSubmitStatus("error");
-      setTimeout(() => {
-        setSubmitStatus("idle");
-      }, 5000);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } finally {
       setIsSubmitting(false);
     }

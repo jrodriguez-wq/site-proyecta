@@ -56,8 +56,44 @@ const RTO_PRICES: Record<string, string> = {
 const phone = "(239) 247-3557";
 const phoneClean = phone.replace(/[^0-9]/g, "");
 
+const initialRtoFormData = { name: "", email: "", phone: "", interest: "" };
+
 export default function RentToOwnPage() {
   const [selectedCommunity, setSelectedCommunity] = useState<"all" | "labelle" | "lehigh-acres">("all");
+  const [rtoFormData, setRtoFormData] = useState(initialRtoFormData);
+  const [rtoSubmitting, setRtoSubmitting] = useState(false);
+  const [rtoSubmitStatus, setRtoSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleRtoFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setRtoFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRtoSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setRtoSubmitting(true);
+    setRtoSubmitStatus("idle");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(rtoFormData),
+      });
+      if (!res.ok) {
+        setRtoSubmitStatus("error");
+        setTimeout(() => setRtoSubmitStatus("idle"), 5000);
+        return;
+      }
+      setRtoSubmitStatus("success");
+      setRtoFormData(initialRtoFormData);
+      setTimeout(() => setRtoSubmitStatus("idle"), 5000);
+    } catch {
+      setRtoSubmitStatus("error");
+      setTimeout(() => setRtoSubmitStatus("idle"), 5000);
+    } finally {
+      setRtoSubmitting(false);
+    }
+  };
 
   // Scroll to form when hash is present
   useEffect(() => {
@@ -741,11 +777,7 @@ export default function RentToOwnPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-6 sm:px-8 md:px-10 pb-8 sm:pb-10">
-                  <form className="space-y-6" onSubmit={(e) => {
-                    e.preventDefault();
-                    // Form submission logic here
-                    alert("Thank you! We'll contact you soon.");
-                  }}>
+                  <form className="space-y-6" onSubmit={handleRtoSubmit}>
                     <div className="space-y-2">
                       <label htmlFor="rto-name" className="text-sm font-semibold text-foreground flex items-center gap-2">
                         <User className="h-4 w-4 text-[rgb(180,22,40)]" />
@@ -757,6 +789,8 @@ export default function RentToOwnPage() {
                         type="text"
                         placeholder="Your full name"
                         required
+                        value={rtoFormData.name}
+                        onChange={handleRtoFormChange}
                         className="w-full px-4 py-3 rounded-lg border-2 border-border focus:border-[rgb(180,22,40)] focus:outline-none transition-colors"
                       />
                     </div>
@@ -772,6 +806,8 @@ export default function RentToOwnPage() {
                         type="email"
                         placeholder="your.email@example.com"
                         required
+                        value={rtoFormData.email}
+                        onChange={handleRtoFormChange}
                         className="w-full px-4 py-3 rounded-lg border-2 border-border focus:border-[rgb(180,22,40)] focus:outline-none transition-colors"
                       />
                     </div>
@@ -787,6 +823,8 @@ export default function RentToOwnPage() {
                         type="tel"
                         placeholder="(123) 456-7890"
                         required
+                        value={rtoFormData.phone}
+                        onChange={handleRtoFormChange}
                         className="w-full px-4 py-3 rounded-lg border-2 border-border focus:border-[rgb(180,22,40)] focus:outline-none transition-colors"
                       />
                     </div>
@@ -801,16 +839,37 @@ export default function RentToOwnPage() {
                         name="interest"
                         placeholder="I'm interested in the Rent to Own program because..."
                         required
+                        value={rtoFormData.interest}
+                        onChange={handleRtoFormChange}
                         className="w-full px-4 py-3 rounded-lg border-2 border-border focus:border-[rgb(180,22,40)] focus:outline-none transition-colors min-h-[120px]"
                       />
                     </div>
 
+                    {rtoSubmitStatus === "success" && (
+                      <p className="p-4 bg-green-50 border-2 border-green-200 rounded-lg text-green-800 text-sm font-medium text-center">
+                        ✓ Thank you! We&apos;ll contact you soon.
+                      </p>
+                    )}
+                    {rtoSubmitStatus === "error" && (
+                      <p className="p-4 bg-red-50 border-2 border-red-200 rounded-lg text-red-800 text-sm font-medium text-center">
+                        ✗ Something went wrong. Please try again or contact us directly.
+                      </p>
+                    )}
+
                     <Button
                       type="submit"
+                      disabled={rtoSubmitting}
                       className="w-full bg-[rgb(180,22,40)] hover:bg-[rgb(144,18,32)] text-white font-bold py-6 text-base sm:text-lg shadow-lg shadow-[rgb(180,22,40)]/25 hover:shadow-xl hover:shadow-[rgb(180,22,40)]/30 transition-all duration-300"
                       size="lg"
                     >
-                      Submit Application
+                      {rtoSubmitting ? (
+                        <span className="flex items-center gap-2">
+                          <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          Sending...
+                        </span>
+                      ) : (
+                        "Submit Application"
+                      )}
                     </Button>
                   </form>
                 </CardContent>
