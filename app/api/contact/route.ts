@@ -4,7 +4,8 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const CONTACT_EMAIL = process.env.RESEND_CONTACT_EMAIL ?? "admin@proyectafl.com";
-const FROM_EMAIL = "Proyecta Web <noreply@proyectafl.com>";
+// From must use your verified domain in Resend (e.g. admin.proyectafl.com subdomain → noreply@admin.proyectafl.com)
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "Proyecta Web <noreply@admin.proyectafl.com>";
 
 type ContactBody = {
   name?: string;
@@ -73,22 +74,31 @@ export async function POST(request: Request) {
     <p>${escapeHtml(interestStr)}</p>
   `;
 
-  const { error } = await resend.emails.send({
-    from: FROM_EMAIL,
-    to: CONTACT_EMAIL,
-    replyTo: emailStr,
-    subject: `Contact form: ${escapeHtml(nameStr)}`,
-    html,
-  });
+  try {
+    const { error } = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: CONTACT_EMAIL,
+      replyTo: emailStr,
+      subject: `Contact form: ${escapeHtml(nameStr)}`,
+      html,
+    });
 
-  if (error) {
+    if (error) {
+      console.error("[api/contact] Resend error:", error);
+      return NextResponse.json(
+        { error: "Failed to send email. Please try again or contact us directly." },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error("[api/contact] Unexpected error:", err);
     return NextResponse.json(
-      { error: error.message || "Failed to send email" },
+      { error: "Failed to send email. Please try again or contact us directly." },
       { status: 500 }
     );
   }
-
-  return NextResponse.json({ success: true });
 }
 
 function escapeHtml(text: string): string {
