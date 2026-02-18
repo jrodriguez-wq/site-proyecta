@@ -16,7 +16,7 @@ const MODEL_MAIN_IMAGES: Record<string, string> = {
   aurora: `/img/hero/aurora.webp`,
   langdon: `/img/hero/1w5a1505-e5.webp`,
   emelia: `/img/hero/1w5a0754-e4.webp`,
-  duplex: `/img/hero/1w5a1493-e5.webp`,
+  duplex: `/img/hero/1w5a0741-1.webp`,
 };
 
 export default function ModelsPage() {
