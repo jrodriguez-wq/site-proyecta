@@ -210,8 +210,7 @@ export default function ApplicationPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simular envío del formulario
-    // Aquí puedes agregar la lógica para enviar los datos a tu API
+    // Simulate form submission – add API logic here to send data
     try {
       // await fetch('/api/application', { method: 'POST', body: JSON.stringify(formData) });
       await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -669,13 +668,13 @@ export default function ApplicationPage() {
               <Card className="shadow-xl border-t-4 border-[rgb(180,22,40)]">
                 <CardHeader className="bg-gradient-to-r from-[rgb(180,22,40)] to-[rgb(144,18,32)] text-white rounded-t-lg py-4 px-4 sm:px-6">
                   <CardTitle className="text-xl sm:text-2xl font-black">
-                    Información de Empleo
+                    Employment Information
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-3 sm:p-4 md:p-6 space-y-3 sm:space-y-4">
                   <div className="space-y-3">
                     <div className="w-full min-w-0">
-                      <Label className="block mb-2 text-sm sm:text-base">Estado de Empleo del Solicitante:</Label>
+                      <Label className="block mb-2 text-sm sm:text-base">Applicant Employment Status:</Label>
                       <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                         <label className="flex items-center cursor-pointer">
                           <input
@@ -686,7 +685,7 @@ export default function ApplicationPage() {
                             onChange={() => handleRadioChange("emp_status", "full_time")}
                             className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                           />
-                          <span className="text-sm">Tiempo Completo</span>
+                          <span className="text-sm">Full Time</span>
                         </label>
                         <label className="flex items-center cursor-pointer">
                           <input
@@ -697,7 +696,7 @@ export default function ApplicationPage() {
                             onChange={() => handleRadioChange("emp_status", "part_time")}
                             className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                           />
-                          <span className="text-sm">Medio Tiempo</span>
+                          <span className="text-sm">Part Time</span>
                         </label>
                         <label className="flex items-center cursor-pointer">
                           <input
@@ -708,7 +707,7 @@ export default function ApplicationPage() {
                             onChange={() => handleRadioChange("emp_status", "student")}
                             className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                           />
-                          <span className="text-sm">Estudiante</span>
+                          <span className="text-sm">Student</span>
                         </label>
                         <label className="flex items-center cursor-pointer">
                           <input
@@ -719,59 +718,59 @@ export default function ApplicationPage() {
                             onChange={() => handleRadioChange("emp_status", "unemployed")}
                             className="mr-2 h-4 w-4 text-[rgb(23,46,123)] focus:ring-[rgb(23,46,123)]"
                           />
-                          <span className="text-sm">Desempleado</span>
+                          <span className="text-sm">Unemployed</span>
                         </label>
                       </div>
                     </div>
 
                     <div className="w-full min-w-0">
-                      <Label htmlFor="employer" className="text-sm sm:text-base">Empleador</Label>
+                      <Label htmlFor="employer" className="text-sm sm:text-base">Employer</Label>
                       <Input
                         id="employer"
                         name="employer"
                         type="text"
                         value={formData.employer}
                         onChange={handleInputChange}
-                        placeholder="Nombre de la empresa"
+                        placeholder="Company name"
                         className="w-full min-w-0"
                       />
                     </div>
 
                     <div className="w-full min-w-0">
-                      <Label htmlFor="empAddress" className="text-sm sm:text-base">Dirección</Label>
+                      <Label htmlFor="empAddress" className="text-sm sm:text-base">Address</Label>
                       <Input
                         id="empAddress"
                         name="emp_address"
                         type="text"
                         value={formData.emp_address}
                         onChange={handleInputChange}
-                        placeholder="Dirección completa del empleador"
+                        placeholder="Full employer address"
                         className="w-full min-w-0"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div className="w-full min-w-0">
-                        <Label htmlFor="jobTitle" className="text-sm sm:text-base">Título del Trabajo</Label>
+                        <Label htmlFor="jobTitle" className="text-sm sm:text-base">Job Title</Label>
                         <Input
                           id="jobTitle"
                           name="job_title"
                           type="text"
                           value={formData.job_title}
                           onChange={handleInputChange}
-                          placeholder="Ej: Gerente de Ventas"
+                          placeholder="e.g. Sales Manager"
                           className="w-full min-w-0"
                         />
                       </div>
                       <div className="w-full min-w-0">
-                        <Label htmlFor="supervisor" className="text-sm sm:text-base">Nombre del Supervisor</Label>
+                        <Label htmlFor="supervisor" className="text-sm sm:text-base">Supervisor Name</Label>
                         <Input
                           id="supervisor"
                           name="supervisor"
                           type="text"
                           value={formData.supervisor}
                           onChange={handleInputChange}
-                          placeholder="Nombre del supervisor"
+                          placeholder="Supervisor name"
                           className="w-full min-w-0"
                         />
                       </div>
@@ -779,7 +778,7 @@ export default function ApplicationPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                       <div className="w-full min-w-0">
-                        <Label htmlFor="dateEmployed" className="text-sm sm:text-base">Fecha de Empleo</Label>
+                        <Label htmlFor="dateEmployed" className="text-sm sm:text-base">Employment Date</Label>
                         <Input
                           id="dateEmployed"
                           name="date_employed"
@@ -791,7 +790,7 @@ export default function ApplicationPage() {
                         />
                       </div>
                       <div className="w-full min-w-0">
-                        <Label htmlFor="empPhone" className="text-sm sm:text-base">Teléfono</Label>
+                        <Label htmlFor="empPhone" className="text-sm sm:text-base">Phone</Label>
                         <Input
                           id="empPhone"
                           name="emp_phone"
@@ -831,14 +830,14 @@ export default function ApplicationPage() {
                     </div>
 
                     <div>
-                      <Label htmlFor="otherIncomeContact">Nombre de Contacto para Otros Ingresos</Label>
+                      <Label htmlFor="otherIncomeContact">Contact Name for Other Income</Label>
                       <Input
                         id="otherIncomeContact"
                         name="other_income_contact"
                         type="text"
                         value={formData.other_income_contact}
                         onChange={handleInputChange}
-                        placeholder="Nombre del contacto"
+                        placeholder="Contact name"
                       />
                     </div>
                   </div>

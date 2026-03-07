@@ -39,8 +39,8 @@ export default function ContactPage() {
             fill
             className="object-cover"
             priority
-            quality={90}
             sizes="100vw"
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/40 to-black/50 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10" />
@@ -70,6 +70,7 @@ export default function ContactPage() {
                     height={120}
                     className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-2xl"
                     priority
+                    unoptimized
                   />
                 </motion.div>
 

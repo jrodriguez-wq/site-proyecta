@@ -37,9 +37,9 @@ export const LocationMap = () => {
             </div>
           </div>
 
-          {/* Información de Contacto y Botones - Ocupa 1 columna */}
+          {/* Contact information and buttons */}
           <div className="space-y-6">
-            {/* Información de Contacto */}
+            {/* Contact Information */}
             <div className="bg-gradient-to-br from-[rgb(23,46,123)]/5 to-white rounded-2xl p-6 space-y-6 shadow-lg">
               <div>
                 <h3 className="text-xl font-black text-[rgb(23,46,123)] mb-4 flex items-center gap-2">
@@ -75,7 +75,7 @@ export const LocationMap = () => {
               </div>
             </div>
 
-            {/* Botones de Acción */}
+            {/* Action buttons */}
             <div className="space-y-3">
               <Button
                 asChild

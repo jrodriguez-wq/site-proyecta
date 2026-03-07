@@ -130,8 +130,8 @@ export const HeroSlider = () => {
               fill
               className="object-cover"
               priority={index === 0}
-              quality={90}
               sizes="100vw"
+              unoptimized
             />
           </div>
         ))}

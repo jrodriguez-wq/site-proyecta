@@ -11,9 +11,9 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Proyecta - Inversión en Bienes Raíces en Florida | proyectafl.com",
-  description: "Invierte en Bienes Raíces en los Estados Unidos y diversifica tu patrimonio en Dólares. Solución integral para una inversión confiable, rentable y segura. Rent to Own en LaBelle y Lehigh Acres.",
-  keywords: ["proyecta", "proyectafl", "real estate Florida", "rent to own", "LaBelle", "Lehigh Acres", "inversión bienes raíces"],
+  title: "Proyecta - Real Estate Investment in Florida | proyectafl.com",
+  description: "Invest in real estate in the United States and diversify your portfolio in dollars. Full solution for a reliable, profitable and secure investment. Rent to Own in LaBelle and Lehigh Acres.",
+  keywords: ["proyecta", "proyectafl", "real estate Florida", "rent to own", "LaBelle", "Lehigh Acres", "real estate investment", "new construction homes Florida"],
   openGraph: {
     url: SITE_URL,
     siteName: "Proyecta",

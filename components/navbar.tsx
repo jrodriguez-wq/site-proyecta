@@ -70,6 +70,11 @@ const navigationItems: NavigationItem[] = [
         href: "/home-buying-guide",
         description: "Learn everything about buying a home",
       },
+      {
+        title: "Warranty",
+        href: "/warranty",
+        description: "Submit a home warranty claim",
+      },
     ],
   },
   {
@@ -241,6 +246,7 @@ export const Navbar = () => {
               height={70}
               className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
               priority
+              unoptimized
             />
           </Link>
 
@@ -384,7 +390,7 @@ export const Navbar = () => {
             })}
           </nav>
 
-          {/* Right Side Actions - Botones → Teléfono */}
+          {/* Right side actions - Phone */}
           <div className="flex items-center gap-1.5 lg:gap-2 xl:gap-3">
             {/* Premium CTA Button - Apply Now */}
             <Button
@@ -474,6 +480,7 @@ export const Navbar = () => {
                       width={200}
                       height={70}
                       className="h-10 w-auto object-contain opacity-90"
+                      unoptimized
                     />
                   </div>
                 </SheetHeader>

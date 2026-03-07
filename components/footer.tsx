@@ -28,6 +28,7 @@ const footerSections = [
     links: [
       { label: "Blog", href: "/blog" },
       { label: "Home Buying Guide", href: "/home-buying-guide" },
+      { label: "Warranty", href: "/warranty" },
     ],
   },
   {
@@ -54,10 +55,11 @@ export const Footer = () => {
                 height={70}
                 className="h-10 sm:h-12 md:h-14 w-auto object-contain"
                 priority
+                unoptimized
               />
             </Link>
             <p className="text-sm text-white/80 leading-relaxed max-w-md">
-              Invierte en Bienes Raíces en los Estados Unidos y diversifica tu patrimonio en Dólares. Solución integral para una inversión confiable, rentable y segura.
+              Invest in real estate in the United States and diversify your portfolio in dollars. Full solution for a reliable, profitable and secure investment.
             </p>
             
             {/* Contact Information */}
